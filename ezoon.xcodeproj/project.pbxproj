@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD2334581A35E25600E61A83 /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2334571A35E25600E61A83 /* ModifyPasswordViewController.m */; };
+		BD23345B1A35E25F00E61A83 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD23345A1A35E25F00E61A83 /* ProfileViewController.m */; };
+		BD34F0521A20388200D9B5CA /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34F0471A20388200D9B5CA /* CustomBadge.m */; };
+		BD34F0531A20388200D9B5CA /* MyLauncherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34F0491A20388200D9B5CA /* MyLauncherItem.m */; };
+		BD34F0541A20388200D9B5CA /* MyLauncherPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34F04B1A20388200D9B5CA /* MyLauncherPageControl.m */; };
+		BD34F0551A20388200D9B5CA /* MyLauncherScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34F04D1A20388200D9B5CA /* MyLauncherScrollView.m */; };
+		BD34F0561A20388200D9B5CA /* MyLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34F04F1A20388200D9B5CA /* MyLauncherView.m */; };
+		BD34F0571A20388200D9B5CA /* MyLauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34F0511A20388200D9B5CA /* MyLauncherViewController.m */; };
+		BD34F05A1A2038FF00D9B5CA /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34F0591A2038FF00D9B5CA /* ItemViewController.m */; };
+		BD34F0641A203D6E00D9B5CA /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = BD34F05C1A203D6E00D9B5CA /* close.png */; };
+		BD34F0651A203D6E00D9B5CA /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = BD34F05D1A203D6E00D9B5CA /* Icon-iPad.png */; };
+		BD34F0661A203D6E00D9B5CA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD34F05E1A203D6E00D9B5CA /* Icon.png */; };
+		BD34F0671A203D6E00D9B5CA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD34F05F1A203D6E00D9B5CA /* Icon@2x.png */; };
+		BD34F0681A203D6E00D9B5CA /* itemImage-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = BD34F0601A203D6E00D9B5CA /* itemImage-iPad.png */; };
+		BD34F0691A203D6E00D9B5CA /* itemImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BD34F0611A203D6E00D9B5CA /* itemImage.png */; };
+		BD34F06A1A203D6E00D9B5CA /* itemImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD34F0621A203D6E00D9B5CA /* itemImage@2x.png */; };
+		BD34F06B1A203D6E00D9B5CA /* launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = BD34F0631A203D6E00D9B5CA /* launcher.png */; };
+		BD6616371A2185DC00786B04 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6616351A2185DC00786B04 /* SettingsViewController.m */; };
+		BD6616381A2185DC00786B04 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD6616361A2185DC00786B04 /* SettingsViewController.xib */; };
+		BD6616431A21862C00786B04 /* JMStaticContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66163C1A21862C00786B04 /* JMStaticContentTableViewCell.m */; };
+		BD6616441A21862C00786B04 /* JMStaticContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66163E1A21862C00786B04 /* JMStaticContentTableViewController.m */; };
+		BD6616451A21862C00786B04 /* JMStaticContentTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6616401A21862C00786B04 /* JMStaticContentTableViewSection.m */; };
+		BD6616461A21862C00786B04 /* StaticTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6616421A21862C00786B04 /* StaticTextFieldTableViewCell.m */; };
+		BD66164D1A2196DA00786B04 /* LeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66164B1A2196DA00786B04 /* LeaderboardViewController.m */; };
+		BD66164E1A2196DA00786B04 /* LeaderboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD66164C1A2196DA00786B04 /* LeaderboardViewController.xib */; };
+		BD73F0671A2034D8000E1296 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73F0661A2034D8000E1296 /* main.m */; };
+		BD73F06A1A2034D8000E1296 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73F0691A2034D8000E1296 /* AppDelegate.m */; };
+		BD73F06D1A2034D8000E1296 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73F06C1A2034D8000E1296 /* ViewController.m */; };
+		BD73F0701A2034D8000E1296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD73F06E1A2034D8000E1296 /* Main.storyboard */; };
+		BD73F0721A2034D8000E1296 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD73F0711A2034D8000E1296 /* Images.xcassets */; };
+		BD73F0751A2034D8000E1296 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD73F0731A2034D8000E1296 /* LaunchScreen.xib */; };
+		BD73F0811A2034D8000E1296 /* ezoonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73F0801A2034D8000E1296 /* ezoonTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD73F07B1A2034D8000E1296 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD73F0591A2034D8000E1296 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD73F0601A2034D8000E1296;
+			remoteInfo = ezoon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD2334561A35E25600E61A83 /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModifyPasswordViewController.h; path = "../../jakemarsh-JMStaticContentTableViewController/SettingsExample/SettingsExample/ModifyPasswordViewController.h"; sourceTree = "<group>"; };
+		BD2334571A35E25600E61A83 /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModifyPasswordViewController.m; path = "../../jakemarsh-JMStaticContentTableViewController/SettingsExample/SettingsExample/ModifyPasswordViewController.m"; sourceTree = "<group>"; };
+		BD2334591A35E25F00E61A83 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = "../../jakemarsh-JMStaticContentTableViewController/SettingsExample/SettingsExample/ProfileViewController.h"; sourceTree = "<group>"; };
+		BD23345A1A35E25F00E61A83 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = "../../jakemarsh-JMStaticContentTableViewController/SettingsExample/SettingsExample/ProfileViewController.m"; sourceTree = "<group>"; };
+		BD34F0461A20388200D9B5CA /* CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBadge.h; sourceTree = "<group>"; };
+		BD34F0471A20388200D9B5CA /* CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadge.m; sourceTree = "<group>"; };
+		BD34F0481A20388200D9B5CA /* MyLauncherItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherItem.h; sourceTree = "<group>"; };
+		BD34F0491A20388200D9B5CA /* MyLauncherItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherItem.m; sourceTree = "<group>"; };
+		BD34F04A1A20388200D9B5CA /* MyLauncherPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherPageControl.h; sourceTree = "<group>"; };
+		BD34F04B1A20388200D9B5CA /* MyLauncherPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherPageControl.m; sourceTree = "<group>"; };
+		BD34F04C1A20388200D9B5CA /* MyLauncherScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherScrollView.h; sourceTree = "<group>"; };
+		BD34F04D1A20388200D9B5CA /* MyLauncherScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherScrollView.m; sourceTree = "<group>"; };
+		BD34F04E1A20388200D9B5CA /* MyLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherView.h; sourceTree = "<group>"; };
+		BD34F04F1A20388200D9B5CA /* MyLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherView.m; sourceTree = "<group>"; };
+		BD34F0501A20388200D9B5CA /* MyLauncherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherViewController.h; sourceTree = "<group>"; };
+		BD34F0511A20388200D9B5CA /* MyLauncherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherViewController.m; sourceTree = "<group>"; };
+		BD34F0581A2038FF00D9B5CA /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
+		BD34F0591A2038FF00D9B5CA /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
+		BD34F05C1A203D6E00D9B5CA /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		BD34F05D1A203D6E00D9B5CA /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad.png"; sourceTree = "<group>"; };
+		BD34F05E1A203D6E00D9B5CA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		BD34F05F1A203D6E00D9B5CA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		BD34F0601A203D6E00D9B5CA /* itemImage-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "itemImage-iPad.png"; sourceTree = "<group>"; };
+		BD34F0611A203D6E00D9B5CA /* itemImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itemImage.png; sourceTree = "<group>"; };
+		BD34F0621A203D6E00D9B5CA /* itemImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "itemImage@2x.png"; sourceTree = "<group>"; };
+		BD34F0631A203D6E00D9B5CA /* launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcher.png; sourceTree = "<group>"; };
+		BD6616341A2185DC00786B04 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		BD6616351A2185DC00786B04 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BD6616361A2185DC00786B04 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		BD66163A1A21862C00786B04 /* JMStaticContentTableViewBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStaticContentTableViewBlocks.h; sourceTree = "<group>"; };
+		BD66163B1A21862C00786B04 /* JMStaticContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStaticContentTableViewCell.h; sourceTree = "<group>"; };
+		BD66163C1A21862C00786B04 /* JMStaticContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMStaticContentTableViewCell.m; sourceTree = "<group>"; };
+		BD66163D1A21862C00786B04 /* JMStaticContentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStaticContentTableViewController.h; sourceTree = "<group>"; };
+		BD66163E1A21862C00786B04 /* JMStaticContentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMStaticContentTableViewController.m; sourceTree = "<group>"; };
+		BD66163F1A21862C00786B04 /* JMStaticContentTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStaticContentTableViewSection.h; sourceTree = "<group>"; };
+		BD6616401A21862C00786B04 /* JMStaticContentTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMStaticContentTableViewSection.m; sourceTree = "<group>"; };
+		BD6616411A21862C00786B04 /* StaticTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		BD6616421A21862C00786B04 /* StaticTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		BD66164A1A2196DA00786B04 /* LeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardViewController.h; sourceTree = "<group>"; };
+		BD66164B1A2196DA00786B04 /* LeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardViewController.m; sourceTree = "<group>"; };
+		BD66164C1A2196DA00786B04 /* LeaderboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardViewController.xib; sourceTree = "<group>"; };
+		BD73F0611A2034D8000E1296 /* ezoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ezoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD73F0651A2034D8000E1296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD73F0661A2034D8000E1296 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD73F0681A2034D8000E1296 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BD73F0691A2034D8000E1296 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BD73F06B1A2034D8000E1296 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BD73F06C1A2034D8000E1296 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BD73F06F1A2034D8000E1296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD73F0711A2034D8000E1296 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BD73F0741A2034D8000E1296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BD73F07A1A2034D8000E1296 /* ezoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ezoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD73F07F1A2034D8000E1296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD73F0801A2034D8000E1296 /* ezoonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ezoonTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD73F05E1A2034D8000E1296 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD73F0771A2034D8000E1296 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD34F0451A20388200D9B5CA /* MyLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				BD34F0461A20388200D9B5CA /* CustomBadge.h */,
+				BD34F0471A20388200D9B5CA /* CustomBadge.m */,
+				BD34F0481A20388200D9B5CA /* MyLauncherItem.h */,
+				BD34F0491A20388200D9B5CA /* MyLauncherItem.m */,
+				BD34F04A1A20388200D9B5CA /* MyLauncherPageControl.h */,
+				BD34F04B1A20388200D9B5CA /* MyLauncherPageControl.m */,
+				BD34F04C1A20388200D9B5CA /* MyLauncherScrollView.h */,
+				BD34F04D1A20388200D9B5CA /* MyLauncherScrollView.m */,
+				BD34F04E1A20388200D9B5CA /* MyLauncherView.h */,
+				BD34F04F1A20388200D9B5CA /* MyLauncherView.m */,
+				BD34F0501A20388200D9B5CA /* MyLauncherViewController.h */,
+				BD34F0511A20388200D9B5CA /* MyLauncherViewController.m */,
+			);
+			path = MyLauncher;
+			sourceTree = "<group>";
+		};
+		BD34F05B1A203D6E00D9B5CA /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				BD34F05C1A203D6E00D9B5CA /* close.png */,
+				BD34F05D1A203D6E00D9B5CA /* Icon-iPad.png */,
+				BD34F05E1A203D6E00D9B5CA /* Icon.png */,
+				BD34F05F1A203D6E00D9B5CA /* Icon@2x.png */,
+				BD34F0601A203D6E00D9B5CA /* itemImage-iPad.png */,
+				BD34F0611A203D6E00D9B5CA /* itemImage.png */,
+				BD34F0621A203D6E00D9B5CA /* itemImage@2x.png */,
+				BD34F0631A203D6E00D9B5CA /* launcher.png */,
+			);
+			path = imgs;
+			sourceTree = "<group>";
+		};
+		BD6616391A21862C00786B04 /* JMStaticContentTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD66163A1A21862C00786B04 /* JMStaticContentTableViewBlocks.h */,
+				BD66163B1A21862C00786B04 /* JMStaticContentTableViewCell.h */,
+				BD66163C1A21862C00786B04 /* JMStaticContentTableViewCell.m */,
+				BD66163D1A21862C00786B04 /* JMStaticContentTableViewController.h */,
+				BD66163E1A21862C00786B04 /* JMStaticContentTableViewController.m */,
+				BD66163F1A21862C00786B04 /* JMStaticContentTableViewSection.h */,
+				BD6616401A21862C00786B04 /* JMStaticContentTableViewSection.m */,
+				BD6616411A21862C00786B04 /* StaticTextFieldTableViewCell.h */,
+				BD6616421A21862C00786B04 /* StaticTextFieldTableViewCell.m */,
+			);
+			name = JMStaticContentTableViewController;
+			path = "../../../Downloads/jakemarsh-JMStaticContentTableViewController/JMStaticContentTableViewController";
+			sourceTree = "<group>";
+		};
+		BD6616471A21885A00786B04 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD2334591A35E25F00E61A83 /* ProfileViewController.h */,
+				BD23345A1A35E25F00E61A83 /* ProfileViewController.m */,
+				BD2334561A35E25600E61A83 /* ModifyPasswordViewController.h */,
+				BD2334571A35E25600E61A83 /* ModifyPasswordViewController.m */,
+				BD6616341A2185DC00786B04 /* SettingsViewController.h */,
+				BD6616351A2185DC00786B04 /* SettingsViewController.m */,
+				BD6616361A2185DC00786B04 /* SettingsViewController.xib */,
+			);
+			name = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		BD6616481A21957700786B04 /* ItemViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD34F0581A2038FF00D9B5CA /* ItemViewController.h */,
+				BD34F0591A2038FF00D9B5CA /* ItemViewController.m */,
+			);
+			name = ItemViewController;
+			sourceTree = "<group>";
+		};
+		BD6616491A2196A300786B04 /* LeaderboardViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD66164A1A2196DA00786B04 /* LeaderboardViewController.h */,
+				BD66164B1A2196DA00786B04 /* LeaderboardViewController.m */,
+				BD66164C1A2196DA00786B04 /* LeaderboardViewController.xib */,
+			);
+			name = LeaderboardViewController;
+			sourceTree = "<group>";
+		};
+		BD73F0581A2034D8000E1296 = {
+			isa = PBXGroup;
+			children = (
+				BD73F0631A2034D8000E1296 /* ezoon */,
+				BD73F07D1A2034D8000E1296 /* ezoonTests */,
+				BD73F0621A2034D8000E1296 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD73F0621A2034D8000E1296 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD73F0611A2034D8000E1296 /* ezoon.app */,
+				BD73F07A1A2034D8000E1296 /* ezoonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD73F0631A2034D8000E1296 /* ezoon */ = {
+			isa = PBXGroup;
+			children = (
+				BD6616491A2196A300786B04 /* LeaderboardViewController */,
+				BD6616481A21957700786B04 /* ItemViewController */,
+				BD6616471A21885A00786B04 /* SettingsViewController */,
+				BD6616391A21862C00786B04 /* JMStaticContentTableViewController */,
+				BD73F0681A2034D8000E1296 /* AppDelegate.h */,
+				BD73F0691A2034D8000E1296 /* AppDelegate.m */,
+				BD34F0451A20388200D9B5CA /* MyLauncher */,
+				BD34F05B1A203D6E00D9B5CA /* imgs */,
+				BD73F06B1A2034D8000E1296 /* ViewController.h */,
+				BD73F06C1A2034D8000E1296 /* ViewController.m */,
+				BD73F06E1A2034D8000E1296 /* Main.storyboard */,
+				BD73F0711A2034D8000E1296 /* Images.xcassets */,
+				BD73F0731A2034D8000E1296 /* LaunchScreen.xib */,
+				BD73F0641A2034D8000E1296 /* Supporting Files */,
+			);
+			path = ezoon;
+			sourceTree = "<group>";
+		};
+		BD73F0641A2034D8000E1296 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD73F0651A2034D8000E1296 /* Info.plist */,
+				BD73F0661A2034D8000E1296 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD73F07D1A2034D8000E1296 /* ezoonTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD73F0801A2034D8000E1296 /* ezoonTests.m */,
+				BD73F07E1A2034D8000E1296 /* Supporting Files */,
+			);
+			path = ezoonTests;
+			sourceTree = "<group>";
+		};
+		BD73F07E1A2034D8000E1296 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD73F07F1A2034D8000E1296 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD73F0601A2034D8000E1296 /* ezoon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD73F0841A2034D8000E1296 /* Build configuration list for PBXNativeTarget "ezoon" */;
+			buildPhases = (
+				BD73F05D1A2034D8000E1296 /* Sources */,
+				BD73F05E1A2034D8000E1296 /* Frameworks */,
+				BD73F05F1A2034D8000E1296 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ezoon;
+			productName = ezoon;
+			productReference = BD73F0611A2034D8000E1296 /* ezoon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD73F0791A2034D8000E1296 /* ezoonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD73F0871A2034D8000E1296 /* Build configuration list for PBXNativeTarget "ezoonTests" */;
+			buildPhases = (
+				BD73F0761A2034D8000E1296 /* Sources */,
+				BD73F0771A2034D8000E1296 /* Frameworks */,
+				BD73F0781A2034D8000E1296 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD73F07C1A2034D8000E1296 /* PBXTargetDependency */,
+			);
+			name = ezoonTests;
+			productName = ezoonTests;
+			productReference = BD73F07A1A2034D8000E1296 /* ezoonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD73F0591A2034D8000E1296 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = jaxteam;
+				TargetAttributes = {
+					BD73F0601A2034D8000E1296 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					BD73F0791A2034D8000E1296 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = BD73F0601A2034D8000E1296;
+					};
+				};
+			};
+			buildConfigurationList = BD73F05C1A2034D8000E1296 /* Build configuration list for PBXProject "ezoon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD73F0581A2034D8000E1296;
+			productRefGroup = BD73F0621A2034D8000E1296 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD73F0601A2034D8000E1296 /* ezoon */,
+				BD73F0791A2034D8000E1296 /* ezoonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD73F05F1A2034D8000E1296 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6616381A2185DC00786B04 /* SettingsViewController.xib in Resources */,
+				BD34F0661A203D6E00D9B5CA /* Icon.png in Resources */,
+				BD73F0701A2034D8000E1296 /* Main.storyboard in Resources */,
+				BD34F0681A203D6E00D9B5CA /* itemImage-iPad.png in Resources */,
+				BD34F0671A203D6E00D9B5CA /* Icon@2x.png in Resources */,
+				BD34F0651A203D6E00D9B5CA /* Icon-iPad.png in Resources */,
+				BD73F0751A2034D8000E1296 /* LaunchScreen.xib in Resources */,
+				BD66164E1A2196DA00786B04 /* LeaderboardViewController.xib in Resources */,
+				BD34F06B1A203D6E00D9B5CA /* launcher.png in Resources */,
+				BD34F0691A203D6E00D9B5CA /* itemImage.png in Resources */,
+				BD34F06A1A203D6E00D9B5CA /* itemImage@2x.png in Resources */,
+				BD34F0641A203D6E00D9B5CA /* close.png in Resources */,
+				BD73F0721A2034D8000E1296 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD73F0781A2034D8000E1296 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD73F05D1A2034D8000E1296 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD73F06D1A2034D8000E1296 /* ViewController.m in Sources */,
+				BD73F06A1A2034D8000E1296 /* AppDelegate.m in Sources */,
+				BD6616371A2185DC00786B04 /* SettingsViewController.m in Sources */,
+				BD23345B1A35E25F00E61A83 /* ProfileViewController.m in Sources */,
+				BD2334581A35E25600E61A83 /* ModifyPasswordViewController.m in Sources */,
+				BD6616451A21862C00786B04 /* JMStaticContentTableViewSection.m in Sources */,
+				BD6616441A21862C00786B04 /* JMStaticContentTableViewController.m in Sources */,
+				BD34F0541A20388200D9B5CA /* MyLauncherPageControl.m in Sources */,
+				BD34F0551A20388200D9B5CA /* MyLauncherScrollView.m in Sources */,
+				BD34F0521A20388200D9B5CA /* CustomBadge.m in Sources */,
+				BD34F0531A20388200D9B5CA /* MyLauncherItem.m in Sources */,
+				BD34F0561A20388200D9B5CA /* MyLauncherView.m in Sources */,
+				BD66164D1A2196DA00786B04 /* LeaderboardViewController.m in Sources */,
+				BD6616431A21862C00786B04 /* JMStaticContentTableViewCell.m in Sources */,
+				BD34F05A1A2038FF00D9B5CA /* ItemViewController.m in Sources */,
+				BD6616461A21862C00786B04 /* StaticTextFieldTableViewCell.m in Sources */,
+				BD73F0671A2034D8000E1296 /* main.m in Sources */,
+				BD34F0571A20388200D9B5CA /* MyLauncherViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD73F0761A2034D8000E1296 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD73F0811A2034D8000E1296 /* ezoonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD73F07C1A2034D8000E1296 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD73F0601A2034D8000E1296 /* ezoon */;
+			targetProxy = BD73F07B1A2034D8000E1296 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD73F06E1A2034D8000E1296 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD73F06F1A2034D8000E1296 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD73F0731A2034D8000E1296 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD73F0741A2034D8000E1296 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD73F0821A2034D8000E1296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BD73F0831A2034D8000E1296 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD73F0851A2034D8000E1296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ezoon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD73F0861A2034D8000E1296 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ezoon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BD73F0881A2034D8000E1296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ezoonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ezoon.app/ezoon";
+			};
+			name = Debug;
+		};
+		BD73F0891A2034D8000E1296 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ezoonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ezoon.app/ezoon";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD73F05C1A2034D8000E1296 /* Build configuration list for PBXProject "ezoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD73F0821A2034D8000E1296 /* Debug */,
+				BD73F0831A2034D8000E1296 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD73F0841A2034D8000E1296 /* Build configuration list for PBXNativeTarget "ezoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD73F0851A2034D8000E1296 /* Debug */,
+				BD73F0861A2034D8000E1296 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD73F0871A2034D8000E1296 /* Build configuration list for PBXNativeTarget "ezoonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD73F0881A2034D8000E1296 /* Debug */,
+				BD73F0891A2034D8000E1296 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD73F0591A2034D8000E1296 /* Project object */;
+}
