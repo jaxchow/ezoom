@@ -29,7 +29,7 @@
 -(void)launcherViewDidEndEditing:(id)sender;
 @end
 
-@interface MyLauncherView : UIView <UIScrollViewDelegate, MyLauncherItemDelegate> {	
+@interface MainLauncherView : UIView <UIScrollViewDelegate, MyLauncherItemDelegate> {	
     UIDeviceOrientation currentOrientation;
 	BOOL itemsAdded;
 	BOOL editing;

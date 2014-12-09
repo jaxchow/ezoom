@@ -7,6 +7,9 @@
 //
 
 #import "LeaderboardViewController.h"
+#import "LeaderboardTableView.h"
+#import "RecipeSegmentControl.h"
+//#import "RecipeSegmentControl.h"
 
 @interface LeaderboardViewController ()
 
@@ -15,24 +18,20 @@
 @implementation LeaderboardViewController
 
 - (void)viewDidLoad {
-    self.navigationController.navigationBarHidden  =TRUE;
-
-   	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:2/255.0 green:100/255.0 blue:162/255.0 alpha:1];
-    [self.view setBackgroundColor:[UIColor colorWithRed:243/255.0 green:237/255.0 blue:250/255.0 alpha:1]];
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btn.frame = CGRectMake(20, 20, 100, 40);
-    btn.backgroundColor = [UIColor clearColor];
-    [btn setTitle:@"Item" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(openView) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
-    // Do any additional setup after loading the view from its nib.
+    //self.navigationController.navigationBarHidden  =TRUE;
+    self.title=@"达人排行榜";
+    LeaderboardTableView *tableView= [[LeaderboardTableView alloc] init];
+ //   [self addChildViewController:tableView];
+    self.navigationController.navigationBar.translucent = NO;
+    [self.view addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_pattern_wood.png"]]];
+    [self.view addSubview:[[RecipeSegmentControl alloc] init]];
+   // [self.navigationController pushViewController:tableViewController animated:YES];
+    [self.view addSubview:tableView];
 }
 
 -(void)openView
 {
     UIViewController *targetViewController = [[LeaderboardViewController alloc] init];
-    
     [self.navigationController pushViewController:targetViewController animated:YES];
 }
 

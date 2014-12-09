@@ -18,18 +18,21 @@
 //  limitations under the License.
 //
 
-#import "MyLauncherViewController.h"
+#import "MainLauncherViewController.h"
+#import "MainProfileView.h"
 
-@interface MyLauncherViewController ()
+static const CGFloat kPhotoDiameter = 130.0f;
+@interface MainLauncherViewController ()
 -(NSMutableArray *)savedLauncherItems;
 -(NSArray*)retrieveFromUserDefaults:(NSString *)key;
 -(void)saveToUserDefaults:(id)object key:(NSString *)key;
 @property (nonatomic, strong) UIView *overlayView;
 @property (nonatomic, strong) UIViewController *currentViewController;
 @property (nonatomic, assign) CGRect statusBarFrame;
+@property (nonatomic, strong) UIView *photoFrameView;
 @end
 
-@implementation MyLauncherViewController
+@implementation MainLauncherViewController
 
 @synthesize launcherNavigationController = _launcherNavigationController;
 @synthesize launcherView = _launcherView;
@@ -42,7 +45,7 @@
 
 -(id)init {
 	if((self = [super init])) { 
-		self.title = @"myLauncher";
+		self.title = @"主界面";
 	}
 	return self;
 }
@@ -50,10 +53,12 @@
 -(void)loadView {
 	[super loadView];
 	
-	[self setLauncherView:[[MyLauncherView alloc] initWithFrame:self.view.bounds]];
-	[self.launcherView setBackgroundColor:[UIColor colorWithRed:243/255.0 green:237/255.0 blue:250/255.0 alpha:1]];
+	[self setLauncherView:[[MainLauncherView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)]];
+	[self.launcherView setBackgroundColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]];
 	[self.launcherView setDelegate:self];
-	self.view = self.launcherView;
+    
+   
+	[self.view addSubview:self.launcherView];
 	
     [self.launcherView setPages:[self savedLauncherItems]];
     [self.launcherView setNumberOfImmovableItems:[(NSNumber *)[self retrieveFromUserDefaults:@"myLauncherViewImmovable"] intValue]];

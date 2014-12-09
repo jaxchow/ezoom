@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MyLauncherViewController.h"
+#import "MainLauncherViewController.h"
 
-@interface ViewController : MyLauncherViewController
+@interface ViewController : MainLauncherViewController
 
 
 @end

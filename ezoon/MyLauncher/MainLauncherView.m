@@ -18,7 +18,8 @@
 //  limitations under the License.
 //
 
-#import "MyLauncherView.h"
+#import "MainLauncherView.h"
+#import "MainProfileView.h"
 
 struct NItemLocation {
 	NSInteger page; 
@@ -71,7 +72,7 @@ static const CGFloat iPadLandscapeItemYStart = 30;
 static const CGFloat iPadLandscapeXPadding = 80;
 static const CGFloat iPadLandscapeYPadding = 30;
 
-@interface MyLauncherView ()
+@interface MainLauncherView ()
 -(void)setupCurrentViewLayoutSettings;
 -(void)layoutItems;
 -(void)beginEditing;
@@ -85,9 +86,10 @@ static const CGFloat iPadLandscapeYPadding = 30;
 @property (nonatomic, retain) NSTimer *itemHoldTimer;
 @property (nonatomic, retain) NSTimer *movePagesTimer;
 @property (nonatomic, retain) MyLauncherItem *draggingItem;
+@property (nonatomic, strong) UIView *photoFrameView;
 @end
 
-@implementation MyLauncherView
+@implementation MainLauncherView
 
 @synthesize editingAllowed, numberOfImmovableItems;
 @synthesize delegate = _delegate;
@@ -109,6 +111,8 @@ static const CGFloat iPadLandscapeYPadding = 30;
 		itemsAdded = NO;
         editingAllowed = YES;
         numberOfImmovableItems = -1;
+        
+        [self addSubview:[[MainProfileView alloc] initWithFrame:CGRectMake(0, 0,320,240)]];
 		[self setupCurrentViewLayoutSettings];
 		
 		[self setPagesScrollView:[[MyLauncherScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height - pControllHeight)]];
@@ -116,7 +120,7 @@ static const CGFloat iPadLandscapeYPadding = 30;
 		self.pagesScrollView.pagingEnabled = YES;
 		self.pagesScrollView.showsHorizontalScrollIndicator = NO;
 		self.pagesScrollView.showsVerticalScrollIndicator = NO;
-		self.pagesScrollView.alwaysBounceHorizontal = YES;
+		self.pagesScrollView.alwaysBounceHorizontal =NO;
 		self.pagesScrollView.scrollsToTop = NO;
 		self.pagesScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 		self.pagesScrollView.delaysContentTouches = YES;
@@ -210,7 +214,7 @@ static const CGFloat iPadLandscapeYPadding = 30;
 
 - (void)updateFrames
 {
-    self.pagesScrollView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height - pControllHeight);
+    self.pagesScrollView.frame = CGRectMake(0, 240, self.frame.size.width, self.frame.size.height - pControllHeight);
 	self.pageControl.frame = CGRectMake(0, self.frame.size.height - pControllHeight, self.frame.size.width, pControllHeight);
 	[self.pageControl setNeedsDisplay];
 }

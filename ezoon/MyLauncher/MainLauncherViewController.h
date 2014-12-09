@@ -19,14 +19,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MyLauncherView.h"
+#import "MainLauncherView.h"
 #import "MyLauncherItem.h"
 
-@interface MyLauncherViewController : UIViewController <MyLauncherViewDelegate, UINavigationControllerDelegate> {
+@interface MainLauncherViewController : UIViewController <MyLauncherViewDelegate, UINavigationControllerDelegate> {
 }
 
 @property (nonatomic, strong) UINavigationController *launcherNavigationController;
-@property (nonatomic, strong) MyLauncherView *launcherView;
+@property (nonatomic, strong) MainLauncherView *launcherView;
 @property (nonatomic, strong) NSMutableDictionary *appControllers;
 
 -(BOOL)hasSavedLauncherItems;
