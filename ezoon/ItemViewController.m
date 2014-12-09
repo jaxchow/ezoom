@@ -26,14 +26,14 @@
 -(void)viewDidLoad
 {
 	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:2/255.0 green:100/255.0 blue:162/255.0 alpha:1];
-	[self.view setBackgroundColor:[UIColor colorWithRed:243/255.0 green:237/255.0 blue:250/255.0 alpha:1]];
+	[self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
 	
-	UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	btn.frame = CGRectMake(20, 20, 100, 40);
-	btn.backgroundColor = [UIColor clearColor];
-	[btn setTitle:@"Item" forState:UIControlStateNormal];
-	[btn addTarget:self action:@selector(openView) forControlEvents:UIControlEventTouchUpInside];
-	[self.view addSubview:btn];
+//	UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//	btn.frame = CGRectMake(20, 20, 100, 40);
+//	btn.backgroundColor = [UIColor clearColor];
+//	[btn setTitle:@"Item" forState:UIControlStateNormal];
+//	[btn addTarget:self action:@selector(openView) forControlEvents:UIControlEventTouchUpInside];
+//	[self.view addSubview:btn];
 }
 
 -(void)openView

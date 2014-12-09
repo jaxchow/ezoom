@@ -64,6 +64,8 @@
 		FBBDC56F1A36BBF200EB522A /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBDC5641A36BBF200EB522A /* AFURLRequestSerialization.m */; };
 		FBBDC5701A36BBF200EB522A /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBDC5661A36BBF200EB522A /* AFURLResponseSerialization.m */; };
 		FBBDC5711A36BBF200EB522A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBDC5681A36BBF200EB522A /* AFURLSessionManager.m */; };
+		FBBDC5741A36E0E300EB522A /* CouponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBDC5731A36E0E300EB522A /* CouponViewController.m */; };
+		FBBDC57A1A36ECB800EB522A /* Top100FamousPersons.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBBDC5791A36ECB800EB522A /* Top100FamousPersons.plist */; };
 		FBD997E71A367C99006FB278 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD997E61A367C99006FB278 /* ProfileViewController.m */; };
 		FBD997EA1A367CAF006FB278 /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD997E91A367CAF006FB278 /* ModifyPasswordViewController.m */; };
 /* End PBXBuildFile section */
@@ -172,6 +174,9 @@
 		FBBDC5661A36BBF200EB522A /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		FBBDC5671A36BBF200EB522A /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		FBBDC5681A36BBF200EB522A /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		FBBDC5721A36E0E300EB522A /* CouponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponViewController.h; sourceTree = "<group>"; };
+		FBBDC5731A36E0E300EB522A /* CouponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponViewController.m; sourceTree = "<group>"; };
+		FBBDC5791A36ECB800EB522A /* Top100FamousPersons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Top100FamousPersons.plist; sourceTree = "<group>"; };
 		FBD997E51A367C99006FB278 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		FBD997E61A367C99006FB278 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		FBD997E81A367CAF006FB278 /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
@@ -321,6 +326,7 @@
 				BD34F0511A20388200D9B5CA /* MainLauncherViewController.m */,
 				FBBDC54E1A36B7BB00EB522A /* MainProfileView.h */,
 				FBBDC54F1A36B7BB00EB522A /* MainProfileView.m */,
+				FBBDC5751A36E0EA00EB522A /* CouponViewController */,
 				BD6616491A2196A300786B04 /* LeaderboardViewController */,
 				BD6616481A21957700786B04 /* ItemViewController */,
 				BD6616471A21885A00786B04 /* SettingsViewController */,
@@ -339,6 +345,7 @@
 		BD73F0641A2034D8000E1296 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FBBDC5791A36ECB800EB522A /* Top100FamousPersons.plist */,
 				FB274FFE1A3685AA00E579E6 /* ezoon-Prefix.pch */,
 				BD73F0651A2034D8000E1296 /* Info.plist */,
 				BD73F0661A2034D8000E1296 /* main.m */,
@@ -422,6 +429,15 @@
 			);
 			name = AFNetworking;
 			path = ezoon/AFNetworking;
+			sourceTree = "<group>";
+		};
+		FBBDC5751A36E0EA00EB522A /* CouponViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FBBDC5721A36E0E300EB522A /* CouponViewController.h */,
+				FBBDC5731A36E0E300EB522A /* CouponViewController.m */,
+			);
+			name = CouponViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +525,7 @@
 				FBBDC5431A36A01900EB522A /* recipe_tab_1_active@2x.png in Resources */,
 				BD6616381A2185DC00786B04 /* SettingsViewController.xib in Resources */,
 				FBBDC5411A36A01900EB522A /* bg_pattern_wood@2x.png in Resources */,
+				FBBDC57A1A36ECB800EB522A /* Top100FamousPersons.plist in Resources */,
 				FBBDC5481A36A01900EB522A /* recipe_tab_2.png in Resources */,
 				FBBDC5461A36A01900EB522A /* recipe_tab_2_active.png in Resources */,
 				FBBDC5441A36A01900EB522A /* recipe_tab_1.png in Resources */,
@@ -573,6 +590,7 @@
 				FBBDC56C1A36BBF200EB522A /* AFNetworkReachabilityManager.m in Sources */,
 				BD6616431A21862C00786B04 /* JMStaticContentTableViewCell.m in Sources */,
 				FBBDC5501A36B7BB00EB522A /* MainProfileView.m in Sources */,
+				FBBDC5741A36E0E300EB522A /* CouponViewController.m in Sources */,
 				BD34F05A1A2038FF00D9B5CA /* ItemViewController.m in Sources */,
 				BD6616461A21862C00786B04 /* StaticTextFieldTableViewCell.m in Sources */,
 				BD73F0671A2034D8000E1296 /* main.m in Sources */,

@@ -12,6 +12,7 @@
 #import "ItemViewController.h"
 #import "SettingsViewController.h"
 #import "LeaderboardViewController.h"
+#import "CouponViewController.h"
 
 @interface ViewController ()
 
@@ -25,7 +26,7 @@
     [[self appControllers] setObject:[LeaderboardViewController class] forKey:@"LeaderboardViewController"];
     [[self appControllers] setObject:[ItemViewController class] forKey:@"ItemViewController"];
     [[self appControllers] setObject:[SettingsViewController class] forKey:@"SettingViewController"];
-    //[[self appControllers] setObject:[SettingsViewController class] forKey:@"SettingsViewController"];
+    [[self appControllers] setObject:[CouponViewController class] forKey:@"CouponViewController"];
     
     if(![self hasSavedLauncherItems])
     {
@@ -46,8 +47,8 @@
                                       [[MyLauncherItem alloc] initWithTitle:@"积分对兑"
                                                                 iPhoneImage:@"itemImage"
                                                                   iPadImage:@"itemImage-iPad"
-                                                                     target:@"ItemViewController"
-                                                                targetTitle:@"Item 3 View"
+                                                                     target:@"CouponViewController"
+                                                                targetTitle:@"积分对兑"
                                                                   deletable:NO],
                                       [[MyLauncherItem alloc] initWithTitle:@"我的车圈"
                                                                 iPhoneImage:@"itemImage"
