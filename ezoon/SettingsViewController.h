@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JMStaticContentTableViewController.h"
-
-@interface SettingsViewController : JMStaticContentTableViewController
-{
-
+@interface SettingsViewController :UIViewController {
 }
-
 -(void) openView;
 @end

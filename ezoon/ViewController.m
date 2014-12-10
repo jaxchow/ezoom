@@ -11,6 +11,7 @@
 #import "CustomBadge.h"
 #import "ItemViewController.h"
 #import "SettingsViewController.h"
+#import "AppSettingsViewController.h"
 #import "LeaderboardViewController.h"
 #import "CouponViewController.h"
 
@@ -25,7 +26,8 @@
     [super loadView];
     [[self appControllers] setObject:[LeaderboardViewController class] forKey:@"LeaderboardViewController"];
     [[self appControllers] setObject:[ItemViewController class] forKey:@"ItemViewController"];
-    [[self appControllers] setObject:[SettingsViewController class] forKey:@"SettingViewController"];
+    [[self appControllers] setObject:[SettingsViewController class] forKey:@"SettingsViewController"];
+    [[self appControllers] setObject:[AppSettingsViewController class] forKey:@"AppSettingsViewController"];
     [[self appControllers] setObject:[CouponViewController class] forKey:@"CouponViewController"];
     
     if(![self hasSavedLauncherItems])
@@ -59,8 +61,8 @@
                                       [[MyLauncherItem alloc] initWithTitle:@"个人设置"
                                                                 iPhoneImage:@"itemImage"
                                                                   iPadImage:@"itemImage-iPad"
-                                                                     target:@"SettingViewController"
-                                                                targetTitle:@"Item 5 View"
+                                                                     target:@"AppSettingsViewController"
+                                                                targetTitle:@"个人设置"
                                                                   deletable:NO],
                                       [[MyLauncherItem alloc] initWithTitle:@"排行榜"
                                                                 iPhoneImage:@"itemImage"
