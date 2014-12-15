@@ -19,7 +19,6 @@
 		048A006D19B9BCB70014A832 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048A005519B9BCB70014A832 /* UIKit.framework */; };
 		048A007519B9BCB80014A832 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 048A007319B9BCB70014A832 /* InfoPlist.strings */; };
 		048A007719B9BCB80014A832 /* ExerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 048A007619B9BCB80014A832 /* ExerTests.m */; };
-		048A008219B9C0030014A832 /* SYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048A008119B9C0030014A832 /* SYViewController.m */; };
 		04B53C5D19B9E28900A4CBD5 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B53C3A19B9E28900A4CBD5 /* photo.png */; };
 		04B53C5E19B9E28900A4CBD5 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B53C3D19B9E28900A4CBD5 /* MKAnnotationView+WebCache.m */; };
 		04B53C5F19B9E28900A4CBD5 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B53C3F19B9E28900A4CBD5 /* NSData+ImageContentType.m */; };
@@ -58,6 +57,29 @@
 		04B53CAC19B9E85500A4CBD5 /* SYMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B53CAB19B9E85500A4CBD5 /* SYMovieModel.m */; };
 		04B53CB019B9E9DA00A4CBD5 /* SYCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B53CAE19B9E9DA00A4CBD5 /* SYCell.m */; };
 		04B53CB119B9E9DA00A4CBD5 /* SYCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B53CAF19B9E9DA00A4CBD5 /* SYCell.xib */; };
+		BD340D761A3EA0B10094D454 /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D4F1A3EA0B10094D454 /* IASKAppSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D771A3EA0B10094D454 /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D511A3EA0B10094D454 /* IASKAppSettingsWebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D781A3EA0B10094D454 /* IASKSpecifierValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D531A3EA0B10094D454 /* IASKSpecifierValuesViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D791A3EA0B10094D454 /* IASKSettingsReader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D571A3EA0B10094D454 /* IASKSettingsReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D7A1A3EA0B10094D454 /* IASKSettingsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D591A3EA0B10094D454 /* IASKSettingsStore.m */; };
+		BD340D7B1A3EA0B10094D454 /* IASKSettingsStoreFile.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D5B1A3EA0B10094D454 /* IASKSettingsStoreFile.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D7C1A3EA0B10094D454 /* IASKSettingsStoreUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D5D1A3EA0B10094D454 /* IASKSettingsStoreUserDefaults.m */; };
+		BD340D7D1A3EA0B10094D454 /* IASKSpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D5F1A3EA0B10094D454 /* IASKSpecifier.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D7E1A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D621A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D7F1A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D641A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D801A3EA0B10094D454 /* IASKPSTitleValueSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D661A3EA0B10094D454 /* IASKPSTitleValueSpecifierViewCell.m */; };
+		BD340D811A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D681A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D821A3EA0B10094D454 /* IASKSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D6A1A3EA0B10094D454 /* IASKSlider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D831A3EA0B10094D454 /* IASKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D6C1A3EA0B10094D454 /* IASKSwitch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D841A3EA0B10094D454 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D6E1A3EA0B10094D454 /* IASKTextField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD340D851A3EA0B10094D454 /* IASKAppSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD340D701A3EA0B10094D454 /* IASKAppSettingsView.xib */; };
+		BD340D861A3EA0B10094D454 /* IASKAppSettingsWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD340D711A3EA0B10094D454 /* IASKAppSettingsWebView.xib */; };
+		BD340D871A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD340D721A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.xib */; };
+		BD340D881A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD340D731A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.xib */; };
+		BD340D891A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD340D741A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.xib */; };
+		BD340D8A1A3EA0B10094D454 /* IASKSpecifierValuesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD340D751A3EA0B10094D454 /* IASKSpecifierValuesView.xib */; };
+		BD340D8C1A3EA0CE0094D454 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD340D8B1A3EA0CE0094D454 /* Settings.bundle */; };
+		BD340D8F1A3EA1A30094D454 /* AppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D8E1A3EA1A30094D454 /* AppSettingsViewController.m */; };
 		BD47DC821A39C4A80022776E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47DC811A39C4A80022776E /* RootViewController.m */; };
 		BD47DC9A1A39C50C0022776E /* bg_pattern_wood.png in Resources */ = {isa = PBXBuildFile; fileRef = BD47DC841A39C50C0022776E /* bg_pattern_wood.png */; };
 		BD47DC9B1A39C50C0022776E /* bg_pattern_wood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD47DC851A39C50C0022776E /* bg_pattern_wood@2x.png */; };
@@ -99,14 +121,13 @@
 		BD47DCE61A39D0EC0022776E /* MyLauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47DCE01A39D0EC0022776E /* MyLauncherViewController.m */; };
 		BD47DCE91A39D10F0022776E /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47DCE81A39D10F0022776E /* ItemViewController.m */; };
 		BD47DCEC1A39D4590022776E /* CouponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47DCEB1A39D4590022776E /* CouponViewController.m */; };
-		BD47DCF21A39DD340022776E /* LeaderboardTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47DCEF1A39DD340022776E /* LeaderboardTableView.m */; };
 		BD47DCF31A39DD340022776E /* LeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47DCF11A39DD340022776E /* LeaderboardViewController.m */; };
-		BD47DCFA1A39DE0A0022776E /* RecipeSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47DCF71A39DE0A0022776E /* RecipeSegmentControl.m */; };
-		BD47DCFB1A39DE0A0022776E /* SegmentButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47DCF91A39DE0A0022776E /* SegmentButtonView.m */; };
 		BD47DCFE1A39E1D30022776E /* LeaderboardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47DCFD1A39E1D30022776E /* LeaderboardModel.m */; };
 		BD47DD021A39E3D20022776E /* LeaderboardCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47DD001A39E3D20022776E /* LeaderboardCellTableViewCell.m */; };
 		BD47DD031A39E3D20022776E /* LeaderboardCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD47DD011A39E3D20022776E /* LeaderboardCellTableViewCell.xib */; };
 		BD47DD061A39F6110022776E /* MainProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47DD051A39F6110022776E /* MainProfileView.m */; };
+		BD63C9911A3EC5D00084666F /* CouponDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63C98F1A3EC5D00084666F /* CouponDetailViewController.m */; };
+		BD63C9921A3EC5D00084666F /* CouponDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD63C9901A3EC5D00084666F /* CouponDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,8 +157,6 @@
 		048A007219B9BCB70014A832 /* ExerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExerTests-Info.plist"; sourceTree = "<group>"; };
 		048A007419B9BCB70014A832 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		048A007619B9BCB80014A832 /* ExerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExerTests.m; sourceTree = "<group>"; };
-		048A008019B9C0030014A832 /* SYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYViewController.h; sourceTree = "<group>"; };
-		048A008119B9C0030014A832 /* SYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYViewController.m; sourceTree = "<group>"; };
 		04B53C3A19B9E28900A4CBD5 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		04B53C3C19B9E28900A4CBD5 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		04B53C3D19B9E28900A4CBD5 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
@@ -216,6 +235,46 @@
 		04B53CAD19B9E9DA00A4CBD5 /* SYCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCell.h; sourceTree = "<group>"; };
 		04B53CAE19B9E9DA00A4CBD5 /* SYCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCell.m; sourceTree = "<group>"; };
 		04B53CAF19B9E9DA00A4CBD5 /* SYCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYCell.xib; sourceTree = "<group>"; };
+		BD340D4E1A3EA0B10094D454 /* IASKAppSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsViewController.h; sourceTree = "<group>"; };
+		BD340D4F1A3EA0B10094D454 /* IASKAppSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKAppSettingsViewController.m; sourceTree = "<group>"; };
+		BD340D501A3EA0B10094D454 /* IASKAppSettingsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsWebViewController.h; sourceTree = "<group>"; };
+		BD340D511A3EA0B10094D454 /* IASKAppSettingsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKAppSettingsWebViewController.m; sourceTree = "<group>"; };
+		BD340D521A3EA0B10094D454 /* IASKSpecifierValuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSpecifierValuesViewController.h; sourceTree = "<group>"; };
+		BD340D531A3EA0B10094D454 /* IASKSpecifierValuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSpecifierValuesViewController.m; sourceTree = "<group>"; };
+		BD340D541A3EA0B10094D454 /* IASKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKViewController.h; sourceTree = "<group>"; };
+		BD340D561A3EA0B10094D454 /* IASKSettingsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsReader.h; sourceTree = "<group>"; };
+		BD340D571A3EA0B10094D454 /* IASKSettingsReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsReader.m; sourceTree = "<group>"; };
+		BD340D581A3EA0B10094D454 /* IASKSettingsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsStore.h; sourceTree = "<group>"; };
+		BD340D591A3EA0B10094D454 /* IASKSettingsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsStore.m; sourceTree = "<group>"; };
+		BD340D5A1A3EA0B10094D454 /* IASKSettingsStoreFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsStoreFile.h; sourceTree = "<group>"; };
+		BD340D5B1A3EA0B10094D454 /* IASKSettingsStoreFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsStoreFile.m; sourceTree = "<group>"; };
+		BD340D5C1A3EA0B10094D454 /* IASKSettingsStoreUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsStoreUserDefaults.h; sourceTree = "<group>"; };
+		BD340D5D1A3EA0B10094D454 /* IASKSettingsStoreUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsStoreUserDefaults.m; sourceTree = "<group>"; };
+		BD340D5E1A3EA0B10094D454 /* IASKSpecifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSpecifier.h; sourceTree = "<group>"; };
+		BD340D5F1A3EA0B10094D454 /* IASKSpecifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSpecifier.m; sourceTree = "<group>"; };
+		BD340D611A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKPSSliderSpecifierViewCell.h; sourceTree = "<group>"; };
+		BD340D621A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKPSSliderSpecifierViewCell.m; sourceTree = "<group>"; };
+		BD340D631A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKPSTextFieldSpecifierViewCell.h; sourceTree = "<group>"; };
+		BD340D641A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKPSTextFieldSpecifierViewCell.m; sourceTree = "<group>"; };
+		BD340D651A3EA0B10094D454 /* IASKPSTitleValueSpecifierViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKPSTitleValueSpecifierViewCell.h; sourceTree = "<group>"; };
+		BD340D661A3EA0B10094D454 /* IASKPSTitleValueSpecifierViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKPSTitleValueSpecifierViewCell.m; sourceTree = "<group>"; };
+		BD340D671A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKPSToggleSwitchSpecifierViewCell.h; sourceTree = "<group>"; };
+		BD340D681A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKPSToggleSwitchSpecifierViewCell.m; sourceTree = "<group>"; };
+		BD340D691A3EA0B10094D454 /* IASKSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSlider.h; sourceTree = "<group>"; };
+		BD340D6A1A3EA0B10094D454 /* IASKSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSlider.m; sourceTree = "<group>"; };
+		BD340D6B1A3EA0B10094D454 /* IASKSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSwitch.h; sourceTree = "<group>"; };
+		BD340D6C1A3EA0B10094D454 /* IASKSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSwitch.m; sourceTree = "<group>"; };
+		BD340D6D1A3EA0B10094D454 /* IASKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKTextField.h; sourceTree = "<group>"; };
+		BD340D6E1A3EA0B10094D454 /* IASKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKTextField.m; sourceTree = "<group>"; };
+		BD340D701A3EA0B10094D454 /* IASKAppSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IASKAppSettingsView.xib; sourceTree = "<group>"; };
+		BD340D711A3EA0B10094D454 /* IASKAppSettingsWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IASKAppSettingsWebView.xib; sourceTree = "<group>"; };
+		BD340D721A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IASKPSSliderSpecifierViewCell.xib; sourceTree = "<group>"; };
+		BD340D731A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IASKPSTextFieldSpecifierViewCell.xib; sourceTree = "<group>"; };
+		BD340D741A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IASKPSToggleSwitchSpecifierViewCell.xib; sourceTree = "<group>"; };
+		BD340D751A3EA0B10094D454 /* IASKSpecifierValuesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IASKSpecifierValuesView.xib; sourceTree = "<group>"; };
+		BD340D8B1A3EA0CE0094D454 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		BD340D8D1A3EA1A30094D454 /* AppSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettingsViewController.h; sourceTree = "<group>"; };
+		BD340D8E1A3EA1A30094D454 /* AppSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettingsViewController.m; sourceTree = "<group>"; };
 		BD47DC801A39C4A80022776E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		BD47DC811A39C4A80022776E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		BD47DC841A39C50C0022776E /* bg_pattern_wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_pattern_wood.png; sourceTree = "<group>"; };
@@ -277,14 +336,8 @@
 		BD47DCE81A39D10F0022776E /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
 		BD47DCEA1A39D4590022776E /* CouponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponViewController.h; sourceTree = "<group>"; };
 		BD47DCEB1A39D4590022776E /* CouponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponViewController.m; sourceTree = "<group>"; };
-		BD47DCEE1A39DD340022776E /* LeaderboardTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardTableView.h; sourceTree = "<group>"; };
-		BD47DCEF1A39DD340022776E /* LeaderboardTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardTableView.m; sourceTree = "<group>"; };
 		BD47DCF01A39DD340022776E /* LeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardViewController.h; sourceTree = "<group>"; };
 		BD47DCF11A39DD340022776E /* LeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardViewController.m; sourceTree = "<group>"; };
-		BD47DCF61A39DE0A0022776E /* RecipeSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeSegmentControl.h; sourceTree = "<group>"; };
-		BD47DCF71A39DE0A0022776E /* RecipeSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeSegmentControl.m; sourceTree = "<group>"; };
-		BD47DCF81A39DE0A0022776E /* SegmentButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentButtonView.h; sourceTree = "<group>"; };
-		BD47DCF91A39DE0A0022776E /* SegmentButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentButtonView.m; sourceTree = "<group>"; };
 		BD47DCFC1A39E1D30022776E /* LeaderboardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardModel.h; sourceTree = "<group>"; };
 		BD47DCFD1A39E1D30022776E /* LeaderboardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardModel.m; sourceTree = "<group>"; };
 		BD47DCFF1A39E3D20022776E /* LeaderboardCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardCellTableViewCell.h; sourceTree = "<group>"; };
@@ -292,6 +345,9 @@
 		BD47DD011A39E3D20022776E /* LeaderboardCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardCellTableViewCell.xib; sourceTree = "<group>"; };
 		BD47DD041A39F6110022776E /* MainProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainProfileView.h; sourceTree = "<group>"; };
 		BD47DD051A39F6110022776E /* MainProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainProfileView.m; sourceTree = "<group>"; };
+		BD63C98E1A3EC5D00084666F /* CouponDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponDetailViewController.h; sourceTree = "<group>"; };
+		BD63C98F1A3EC5D00084666F /* CouponDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponDetailViewController.m; sourceTree = "<group>"; };
+		BD63C9901A3EC5D00084666F /* CouponDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,8 +399,9 @@
 		043D7E6819BB21DE00B6FA9E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				048A008019B9C0030014A832 /* SYViewController.h */,
-				048A008119B9C0030014A832 /* SYViewController.m */,
+				BD63C98E1A3EC5D00084666F /* CouponDetailViewController.h */,
+				BD63C98F1A3EC5D00084666F /* CouponDetailViewController.m */,
+				BD63C9901A3EC5D00084666F /* CouponDetailViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -352,7 +409,7 @@
 		048A004519B9BCB70014A832 = {
 			isa = PBXGroup;
 			children = (
-				BD47DCF51A39DE0A0022776E /* RecipeSegmentControl */,
+				BD340D4C1A3EA0B10094D454 /* InAppSettingsKit */,
 				BD47DCD41A39D0EC0022776E /* MyLauncher */,
 				BD47DCB31A39C7840022776E /* AFNetworking */,
 				BD47DCC71A39C7840022776E /* PAImageView */,
@@ -364,6 +421,7 @@
 				048A007019B9BCB70014A832 /* ExerTests */,
 				048A005019B9BCB70014A832 /* Frameworks */,
 				048A004F19B9BCB70014A832 /* Products */,
+				BD340D8B1A3EA0CE0094D454 /* Settings.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -393,6 +451,7 @@
 		048A005719B9BCB70014A832 /* Exer */ = {
 			isa = PBXGroup;
 			children = (
+				BD340D901A3EA1AD0094D454 /* AppSettingsModule */,
 				BD47DCF41A39DD3C0022776E /* LeaderboardModule */,
 				BD47DCED1A39D4C30022776E /* CouponModule */,
 				BD47DC831A39C50C0022776E /* imgs */,
@@ -535,6 +594,91 @@
 			path = json;
 			sourceTree = "<group>";
 		};
+		BD340D4C1A3EA0B10094D454 /* InAppSettingsKit */ = {
+			isa = PBXGroup;
+			children = (
+				BD340D4D1A3EA0B10094D454 /* Controllers */,
+				BD340D551A3EA0B10094D454 /* Models */,
+				BD340D601A3EA0B10094D454 /* Views */,
+				BD340D6F1A3EA0B10094D454 /* Xibs */,
+			);
+			path = InAppSettingsKit;
+			sourceTree = "<group>";
+		};
+		BD340D4D1A3EA0B10094D454 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD340D4E1A3EA0B10094D454 /* IASKAppSettingsViewController.h */,
+				BD340D4F1A3EA0B10094D454 /* IASKAppSettingsViewController.m */,
+				BD340D501A3EA0B10094D454 /* IASKAppSettingsWebViewController.h */,
+				BD340D511A3EA0B10094D454 /* IASKAppSettingsWebViewController.m */,
+				BD340D521A3EA0B10094D454 /* IASKSpecifierValuesViewController.h */,
+				BD340D531A3EA0B10094D454 /* IASKSpecifierValuesViewController.m */,
+				BD340D541A3EA0B10094D454 /* IASKViewController.h */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BD340D551A3EA0B10094D454 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD340D561A3EA0B10094D454 /* IASKSettingsReader.h */,
+				BD340D571A3EA0B10094D454 /* IASKSettingsReader.m */,
+				BD340D581A3EA0B10094D454 /* IASKSettingsStore.h */,
+				BD340D591A3EA0B10094D454 /* IASKSettingsStore.m */,
+				BD340D5A1A3EA0B10094D454 /* IASKSettingsStoreFile.h */,
+				BD340D5B1A3EA0B10094D454 /* IASKSettingsStoreFile.m */,
+				BD340D5C1A3EA0B10094D454 /* IASKSettingsStoreUserDefaults.h */,
+				BD340D5D1A3EA0B10094D454 /* IASKSettingsStoreUserDefaults.m */,
+				BD340D5E1A3EA0B10094D454 /* IASKSpecifier.h */,
+				BD340D5F1A3EA0B10094D454 /* IASKSpecifier.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD340D601A3EA0B10094D454 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD340D611A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.h */,
+				BD340D621A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.m */,
+				BD340D631A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.h */,
+				BD340D641A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.m */,
+				BD340D651A3EA0B10094D454 /* IASKPSTitleValueSpecifierViewCell.h */,
+				BD340D661A3EA0B10094D454 /* IASKPSTitleValueSpecifierViewCell.m */,
+				BD340D671A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.h */,
+				BD340D681A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.m */,
+				BD340D691A3EA0B10094D454 /* IASKSlider.h */,
+				BD340D6A1A3EA0B10094D454 /* IASKSlider.m */,
+				BD340D6B1A3EA0B10094D454 /* IASKSwitch.h */,
+				BD340D6C1A3EA0B10094D454 /* IASKSwitch.m */,
+				BD340D6D1A3EA0B10094D454 /* IASKTextField.h */,
+				BD340D6E1A3EA0B10094D454 /* IASKTextField.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD340D6F1A3EA0B10094D454 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				BD340D701A3EA0B10094D454 /* IASKAppSettingsView.xib */,
+				BD340D711A3EA0B10094D454 /* IASKAppSettingsWebView.xib */,
+				BD340D721A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.xib */,
+				BD340D731A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.xib */,
+				BD340D741A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.xib */,
+				BD340D751A3EA0B10094D454 /* IASKSpecifierValuesView.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		BD340D901A3EA1AD0094D454 /* AppSettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				BD340D8D1A3EA1A30094D454 /* AppSettingsViewController.h */,
+				BD340D8E1A3EA1A30094D454 /* AppSettingsViewController.m */,
+			);
+			name = AppSettingsModule;
+			sourceTree = "<group>";
+		};
 		BD47DC831A39C50C0022776E /* imgs */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,8 +779,6 @@
 		BD47DCF41A39DD3C0022776E /* LeaderboardModule */ = {
 			isa = PBXGroup;
 			children = (
-				BD47DCEE1A39DD340022776E /* LeaderboardTableView.h */,
-				BD47DCEF1A39DD340022776E /* LeaderboardTableView.m */,
 				BD47DCF01A39DD340022776E /* LeaderboardViewController.h */,
 				BD47DCF11A39DD340022776E /* LeaderboardViewController.m */,
 				BD47DCFD1A39E1D30022776E /* LeaderboardModel.m */,
@@ -646,18 +788,6 @@
 				BD47DD011A39E3D20022776E /* LeaderboardCellTableViewCell.xib */,
 			);
 			name = LeaderboardModule;
-			sourceTree = "<group>";
-		};
-		BD47DCF51A39DE0A0022776E /* RecipeSegmentControl */ = {
-			isa = PBXGroup;
-			children = (
-				BD47DCF61A39DE0A0022776E /* RecipeSegmentControl.h */,
-				BD47DCF71A39DE0A0022776E /* RecipeSegmentControl.m */,
-				BD47DCF81A39DE0A0022776E /* SegmentButtonView.h */,
-				BD47DCF91A39DE0A0022776E /* SegmentButtonView.m */,
-			);
-			name = RecipeSegmentControl;
-			path = ../../Desktop/ezoom/ezoon/RecipeSegmentControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -737,16 +867,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD340D8C1A3EA0CE0094D454 /* Settings.bundle in Resources */,
+				BD63C9921A3EC5D00084666F /* CouponDetailViewController.xib in Resources */,
 				BD47DCAD1A39C50C0022776E /* recipe_tab_3@2x.png in Resources */,
+				BD340D851A3EA0B10094D454 /* IASKAppSettingsView.xib in Resources */,
 				BD47DC9E1A39C50C0022776E /* Icon.png in Resources */,
+				BD340D871A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.xib in Resources */,
 				BD47DCA61A39C50C0022776E /* recipe_tab_1_active.png in Resources */,
 				048A005C19B9BCB70014A832 /* InfoPlist.strings in Resources */,
 				BD47DCAE1A39C50C0022776E /* recipe_tab_3_active.png in Resources */,
+				BD340D8A1A3EA0B10094D454 /* IASKSpecifierValuesView.xib in Resources */,
 				048A006419B9BCB70014A832 /* Images.xcassets in Resources */,
 				04B53C5D19B9E28900A4CBD5 /* photo.png in Resources */,
 				BD47DC9B1A39C50C0022776E /* bg_pattern_wood@2x.png in Resources */,
 				BD47DCA31A39C50C0022776E /* launcher.png in Resources */,
 				BD47DCA01A39C50C0022776E /* itemImage-iPad.png in Resources */,
+				BD340D891A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.xib in Resources */,
 				BD47DCA41A39C50C0022776E /* recipe_tab_1.png in Resources */,
 				BD47DCA11A39C50C0022776E /* itemImage.png in Resources */,
 				BD47DC9D1A39C50C0022776E /* Icon-iPad.png in Resources */,
@@ -758,9 +894,11 @@
 				BD47DD031A39E3D20022776E /* LeaderboardCellTableViewCell.xib in Resources */,
 				BD47DCAF1A39C50C0022776E /* recipe_tab_3_active@2x.png in Resources */,
 				04B53CB119B9E9DA00A4CBD5 /* SYCell.xib in Resources */,
+				BD340D881A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.xib in Resources */,
 				BD47DCAB1A39C50C0022776E /* recipe_tab_2_active@2x.png in Resources */,
 				BD47DCA51A39C50C0022776E /* recipe_tab_1@2x.png in Resources */,
 				BD47DCAC1A39C50C0022776E /* recipe_tab_3.png in Resources */,
+				BD340D861A3EA0B10094D454 /* IASKAppSettingsWebView.xib in Resources */,
 				BD47DCAA1A39C50C0022776E /* recipe_tab_2_active.png in Resources */,
 				BD47DC9F1A39C50C0022776E /* Icon@2x.png in Resources */,
 				BD47DCA91A39C50C0022776E /* recipe_tab_2@2x.png in Resources */,
@@ -798,7 +936,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				048A008219B9C0030014A832 /* SYViewController.m in Sources */,
 				BD47DCE91A39D10F0022776E /* ItemViewController.m in Sources */,
 				BD47DCD31A39C7840022776E /* PAImageView.m in Sources */,
 				04B53C6A19B9E28900A4CBD5 /* UIImage+WebP.m in Sources */,
@@ -813,50 +950,64 @@
 				04B53C5F19B9E28900A4CBD5 /* NSData+ImageContentType.m in Sources */,
 				04B53CAC19B9E85500A4CBD5 /* SYMovieModel.m in Sources */,
 				04B53C6219B9E28900A4CBD5 /* SDWebImageDecoder.m in Sources */,
+				BD340D791A3EA0B10094D454 /* IASKSettingsReader.m in Sources */,
 				048A006219B9BCB70014A832 /* AppDelegate.m in Sources */,
+				BD63C9911A3EC5D00084666F /* CouponDetailViewController.m in Sources */,
 				04B53C6B19B9E28900A4CBD5 /* UIImageView+HighlightedWebCache.m in Sources */,
+				BD340D821A3EA0B10094D454 /* IASKSlider.m in Sources */,
 				04B53CA519B9E6CB00A4CBD5 /* NSString+SBJSON.m in Sources */,
 				BD47DCE31A39D0EC0022776E /* MyLauncherPageControl.m in Sources */,
 				04B53C9519B9E49000A4CBD5 /* Reachability.m in Sources */,
+				BD340D7B1A3EA0B10094D454 /* IASKSettingsStoreFile.m in Sources */,
 				04B53C8E19B9E49000A4CBD5 /* ASIDataCompressor.m in Sources */,
+				BD340D7C1A3EA0B10094D454 /* IASKSettingsStoreUserDefaults.m in Sources */,
+				BD340D831A3EA0B10094D454 /* IASKSwitch.m in Sources */,
 				BD47DCD01A39C7840022776E /* AFURLRequestSerialization.m in Sources */,
 				04B53C6319B9E28900A4CBD5 /* SDWebImageDownloader.m in Sources */,
 				BD47DCD11A39C7840022776E /* AFURLResponseSerialization.m in Sources */,
 				04B53CA819B9E6CB00A4CBD5 /* SBJsonParser.m in Sources */,
-				BD47DCF21A39DD340022776E /* LeaderboardTableView.m in Sources */,
 				04B53C6119B9E28900A4CBD5 /* SDWebImageCompat.m in Sources */,
 				BD47DCEC1A39D4590022776E /* CouponViewController.m in Sources */,
 				04B53CA419B9E6CB00A4CBD5 /* NSObject+SBJSON.m in Sources */,
 				04B53CA719B9E6CB00A4CBD5 /* SBJsonBase.m in Sources */,
 				BD47DCE61A39D0EC0022776E /* MyLauncherViewController.m in Sources */,
+				BD340D7E1A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.m in Sources */,
 				048A005E19B9BCB70014A832 /* main.m in Sources */,
 				04B53C6819B9E28900A4CBD5 /* UIImage+GIF.m in Sources */,
 				BD47DCFE1A39E1D30022776E /* LeaderboardModel.m in Sources */,
-				BD47DCFB1A39DE0A0022776E /* SegmentButtonView.m in Sources */,
+				BD340D7D1A3EA0B10094D454 /* IASKSpecifier.m in Sources */,
 				BD47DD061A39F6110022776E /* MainProfileView.m in Sources */,
 				BD47DCF31A39DD340022776E /* LeaderboardViewController.m in Sources */,
+				BD340D781A3EA0B10094D454 /* IASKSpecifierValuesViewController.m in Sources */,
 				04B53C9319B9E49000A4CBD5 /* ASIInputStream.m in Sources */,
 				04B53CB019B9E9DA00A4CBD5 /* SYCell.m in Sources */,
 				BD47DCCD1A39C7840022776E /* AFNetworkReachabilityManager.m in Sources */,
+				BD340D811A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.m in Sources */,
 				04B53C6919B9E28900A4CBD5 /* UIImage+MultiFormat.m in Sources */,
 				04B53C6619B9E28900A4CBD5 /* SDWebImagePrefetcher.m in Sources */,
 				04B53C5E19B9E28900A4CBD5 /* MKAnnotationView+WebCache.m in Sources */,
 				04B53C9219B9E49000A4CBD5 /* ASIHTTPRequest.m in Sources */,
+				BD340D841A3EA0B10094D454 /* IASKTextField.m in Sources */,
 				04B53C9019B9E49000A4CBD5 /* ASIDownloadCache.m in Sources */,
 				04B53C6C19B9E28900A4CBD5 /* UIImageView+WebCache.m in Sources */,
-				BD47DCFA1A39DE0A0022776E /* RecipeSegmentControl.m in Sources */,
 				BD47DCE41A39D0EC0022776E /* MyLauncherScrollView.m in Sources */,
 				04B53C9119B9E49000A4CBD5 /* ASIFormDataRequest.m in Sources */,
 				BD47DCCC1A39C7840022776E /* AFHTTPSessionManager.m in Sources */,
+				BD340D801A3EA0B10094D454 /* IASKPSTitleValueSpecifierViewCell.m in Sources */,
+				BD340D761A3EA0B10094D454 /* IASKAppSettingsViewController.m in Sources */,
 				BD47DCE11A39D0EC0022776E /* CustomBadge.m in Sources */,
 				BD47DC821A39C4A80022776E /* RootViewController.m in Sources */,
+				BD340D7A1A3EA0B10094D454 /* IASKSettingsStore.m in Sources */,
+				BD340D771A3EA0B10094D454 /* IASKAppSettingsWebViewController.m in Sources */,
 				BD47DCD21A39C7840022776E /* AFURLSessionManager.m in Sources */,
 				BD47DCCF1A39C7840022776E /* AFURLConnectionOperation.m in Sources */,
 				04B53C8D19B9E49000A4CBD5 /* ASIAuthenticationDialog.m in Sources */,
 				BD47DD021A39E3D20022776E /* LeaderboardCellTableViewCell.m in Sources */,
 				BD47DCCB1A39C7840022776E /* AFHTTPRequestOperationManager.m in Sources */,
 				04B53C8F19B9E49000A4CBD5 /* ASIDataDecompressor.m in Sources */,
+				BD340D8F1A3EA1A30094D454 /* AppSettingsViewController.m in Sources */,
 				04B53C6D19B9E28900A4CBD5 /* UIView+WebCacheOperation.m in Sources */,
+				BD340D7F1A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.m in Sources */,
 				BD47DCE21A39D0EC0022776E /* MyLauncherItem.m in Sources */,
 				04B53C6519B9E28900A4CBD5 /* SDWebImageManager.m in Sources */,
 				04B53CA919B9E6CB00A4CBD5 /* SBJsonWriter.m in Sources */,

@@ -23,7 +23,7 @@
     IASKSwitch *_toggle;
 }
 
-@property (nonatomic, retain) IBOutlet UILabel *label;
-@property (nonatomic, retain) IBOutlet IASKSwitch *toggle;
+@property (nonatomic, assign) IBOutlet UILabel *label;
+@property (nonatomic, assign) IBOutlet IASKSwitch *toggle;
 
 @end

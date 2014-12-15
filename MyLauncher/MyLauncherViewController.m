@@ -41,7 +41,7 @@
 #pragma mark - ViewController lifecycle
 
 -(id)init {
-    self.navigationController.toolbarHidden=true;
+    //[self.navigationController setNavigationBarHidden:TRUE];
 	if((self = [super init])) { 
 		self.title = @"myLauncher";
 	}

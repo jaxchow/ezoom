@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ItemViewController.h"
 @interface LeaderboardViewController : UIViewController
 -(void) openView;
+@property(nonatomic, strong, readonly) UITableView *tableView;
 @end

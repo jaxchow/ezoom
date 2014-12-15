@@ -12,6 +12,7 @@
 #import "ItemViewController.h"
 #import "CouponViewController.h"
 #import "LeaderboardViewController.h"
+#import "AppSettingsViewController.h"
 @interface RootViewController ()
             
 
@@ -25,7 +26,7 @@
     [[self appControllers] setObject:[ItemViewController class] forKey:@"ItemViewController"];
     [[self appControllers] setObject:[CouponViewController class] forKey:@"CouponViewController"];
     [[self appControllers] setObject:[LeaderboardViewController class] forKey:@"LeaderboardViewController"];
-    [[self appControllers] setObject:[ItemViewController class] forKey:@"ItemViewController"];
+    [[self appControllers] setObject:[AppSettingsViewController class] forKey:@"AppSettingsViewController"];
     
     if(![self hasSavedLauncherItems])
     {
@@ -35,13 +36,13 @@
                                                                 iPhoneImage:@"itemImage"
                                                                   iPadImage:@"itemImage-iPad"
                                                                      target:@"ItemViewController"
-                                                                targetTitle:@"Item 1 View"
+                                                                targetTitle:@"保修比价"
                                                                   deletable:NO],
                                       [[MyLauncherItem alloc] initWithTitle:@"车友活动"
                                                                 iPhoneImage:@"itemImage"
                                                                   iPadImage:@"itemImage-iPad"
                                                                      target:@"ItemViewController"
-                                                                targetTitle:@"Item 2 View"
+                                                                targetTitle:@"车友活动"
                                                                   deletable:NO],
                                       [[MyLauncherItem alloc] initWithTitle:@"积分对兑"
                                                                 iPhoneImage:@"itemImage"
@@ -53,18 +54,18 @@
                                                                 iPhoneImage:@"itemImage"
                                                                   iPadImage:@"itemImage-iPad"
                                                                      target:@"ItemViewController"
-                                                                targetTitle:@"Item 4 View"
+                                                                targetTitle:@"我的车圈"
                                                                   deletable:NO],
                                       [[MyLauncherItem alloc] initWithTitle:@"个人设置"
                                                                 iPhoneImage:@"itemImage"
                                                                   iPadImage:@"itemImage-iPad"
-                                                                     target:@"ItemViewController"
-                                                                targetTitle:@"Item 5 View"
+                                                                     target:@"AppSettingsViewController"
+                                                                targetTitle:@"个人设置"
                                                                   deletable:NO],
                                       [[MyLauncherItem alloc] initWithTitle:@"排行榜"
                                                                 iPhoneImage:@"itemImage"
                                                                   iPadImage:@"itemImage-iPad"
-                                                                     target:@"ItemViewController"
+                                                                     target:@"LeaderboardViewController"
                                                                 targetTitle:@"排行榜"
                                                                   deletable:NO],
                                       nil], nil]];
@@ -78,7 +79,7 @@
     return [super shouldAutorotateToInterfaceOrientation:toInterfaceOrientation];
 }
 - (void)viewDidLoad {
-    self.launcherNavigationController.toolbarHidden=TRUE;
+   // self.launcherNavigationController.toolbarHidden=TRUE;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }

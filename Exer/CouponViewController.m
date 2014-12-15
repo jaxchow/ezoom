@@ -12,19 +12,15 @@
 #import "UIImageView+WebCache.h"
 #import "SYMovieModel.h"
 #import "SYCell.h"
+#import "CouponDetailViewController.h"
 
-static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIdentifier = @"kFKRSearchBarTableViewControllerDefaultTableViewCellIdentifier";
 
-@interface CouponViewController ()<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate, UISearchDisplayDelegate>
+@interface CouponViewController ()<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *_tableView;
     
     NSMutableArray *_saveDataArray;
-    UISearchDisplayController *strongSearchDisplayController;
 }
-@property(nonatomic, copy) NSArray *famousPersons;
-@property(nonatomic, copy) NSArray *filteredPersons;
-@property(nonatomic, copy) NSArray *sections;
 
 @end
 
@@ -55,7 +51,7 @@ static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIden
     
     _saveDataArray = [NSMutableArray array];
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 20) style:UITableViewStylePlain];
     
     _tableView.rowHeight = 120;
     
@@ -117,11 +113,14 @@ static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIden
     cell.name.text = model.movieName;
     cell.year.text = model.movieYear;
     [cell.movieImageView sd_setImageWithURL:[NSURL URLWithString:model.movieImage] placeholderImage:[UIImage imageNamed:@"photo"]];
-    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self.navigationController pushViewController:[[CouponDetailViewController alloc] initWithKey:@"11"] animated:TRUE];
+}
 
 
 @end

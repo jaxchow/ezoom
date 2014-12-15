@@ -40,6 +40,18 @@
 - (CGFloat)tableView:(UITableView*)tableView heightForSpecifier:(IASKSpecifier*)specifier;
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForSpecifier:(IASKSpecifier*)specifier;
 
+#pragma mark - mail composing customization
+- (NSString*) settingsViewController:(id<IASKViewController>)settingsViewController 
+         mailComposeBodyForSpecifier:(IASKSpecifier*) specifier;
+
+- (UIViewController<MFMailComposeViewControllerDelegate>*) settingsViewController:(id<IASKViewController>)settingsViewController
+                                     viewControllerForMailComposeViewForSpecifier:(IASKSpecifier*) specifier;
+
+- (void) settingsViewController:(id<IASKViewController>) settingsViewController
+          mailComposeController:(MFMailComposeViewController*)controller 
+            didFinishWithResult:(MFMailComposeResult)result 
+                          error:(NSError*)error;
+
 #pragma mark - respond to button taps
 - (void)settingsViewController:(IASKAppSettingsViewController*)sender buttonTappedForKey:(NSString*)key;
 - (void)settingsViewController:(IASKAppSettingsViewController*)sender tableView:(UITableView *)tableView didSelectCustomViewSpecifier:(IASKSpecifier*)specifier;
@@ -61,7 +73,7 @@
     BOOL                    _showDoneButton;
 }
 
-@property (nonatomic, retain) IBOutlet id delegate;
+@property (nonatomic, assign) IBOutlet id delegate;
 @property (nonatomic, copy) NSString *file;
 @property (nonatomic, assign) BOOL showCreditsFooter;
 @property (nonatomic, assign) BOOL showDoneButton;

@@ -40,12 +40,20 @@
     return self;
 }
 
+- (void)dealloc {
+    [_specifierDict release], _specifierDict = nil;
+    [_multipleValuesDict release], _multipleValuesDict = nil;
+	
+	_settingsReader = nil;
+
+    [super dealloc];
+}
 
 - (void)_reinterpretValues:(NSDictionary*)specifierDict {
     NSArray *values = [_specifierDict objectForKey:kIASKValues];
     NSArray *titles = [_specifierDict objectForKey:kIASKTitles];
     
-    NSMutableDictionary *multipleValuesDict = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *multipleValuesDict = [[[NSMutableDictionary alloc] init] autorelease];
     
     if (values) {
 		[multipleValuesDict setObject:values forKey:kIASKValues];

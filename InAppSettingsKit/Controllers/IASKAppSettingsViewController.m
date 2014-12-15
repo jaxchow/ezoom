@@ -83,12 +83,13 @@ CGRect IASKCGRectSwap(CGRect rect);
 	if (!_file) {
 		return @"Root";
 	}
-	return _file;
+	return [[_file retain] autorelease];
 }
 
 - (void)setFile:(NSString *)file {
 	if (file != _file) {
         
+		[_file release];
 		_file = [file copy];
 	}
 	
@@ -178,7 +179,8 @@ CGRect IASKCGRectSwap(CGRect rect);
 																					target:self 
 																					action:@selector(dismiss:)];
 		self.navigationItem.rightBarButtonItem = buttonItem;
-	}
+		[buttonItem release];
+	} 
 	if (!self.title) {
 		self.title = NSLocalizedString(@"Settings", @"");
 	}
@@ -239,6 +241,19 @@ CGRect IASKCGRectSwap(CGRect rect);
 	}
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+    [_viewList release], _viewList = nil;
+	[_file release], _file = nil;
+	[_currentFirstResponder release], _currentFirstResponder = nil;
+	[_settingsReader release], _settingsReader = nil;
+    [_settingsStore release], _settingsStore = nil;
+	
+	_delegate = nil;
+
+    [super dealloc];
+}
 
 
 #pragma mark -
@@ -374,7 +389,7 @@ CGRect IASKCGRectSwap(CGRect rect);
 											options:nil] objectAtIndex:0];
 	}
 	else if ([identifier isEqualToString:kIASKPSMultiValueSpecifier] || [identifier isEqualToString:kIASKPSTitleValueSpecifier]) {
-		cell = [[IASKPSTitleValueSpecifierViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
+		cell = [[[IASKPSTitleValueSpecifierViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier] autorelease];
 		cell.accessoryType = [identifier isEqualToString:kIASKPSMultiValueSpecifier] ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
 	}
 	else if ([identifier isEqualToString:kIASKPSTextFieldSpecifier]) {
@@ -387,15 +402,15 @@ CGRect IASKCGRectSwap(CGRect rect);
 																			   owner:self 
 																			 options:nil] objectAtIndex:0];
 	} else if ([identifier isEqualToString:kIASKPSChildPaneSpecifier]) {
-		cell = [[IASKPSTitleValueSpecifierViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
+		cell = [[[IASKPSTitleValueSpecifierViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier] autorelease];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	} else if ([identifier isEqualToString:kIASKButtonSpecifier]) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
 	} else if ([identifier isEqualToString:kIASKMailComposeSpecifier]) {
-		cell = [[IASKPSTitleValueSpecifierViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
+		cell = [[[IASKPSTitleValueSpecifierViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier] autorelease];
 		[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 	} else {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
 	}
 	return cell;
 }
@@ -508,7 +523,7 @@ CGRect IASKCGRectSwap(CGRect rect);
 	//create a set of specifier types that can't be selected
 	static NSSet* noSelectionTypes = nil;
 	if(nil == noSelectionTypes) {
-		noSelectionTypes = [NSSet setWithObjects:kIASKPSToggleSwitchSpecifier, kIASKPSSliderSpecifier, nil] ;
+		noSelectionTypes = [[NSSet setWithObjects:kIASKPSToggleSwitchSpecifier, kIASKPSSliderSpecifier, nil] retain];
 	}
   
 	IASKSpecifier *specifier  = [self.settingsReader specifierForIndexPath:indexPath];
@@ -539,6 +554,7 @@ CGRect IASKCGRectSwap(CGRect rect);
             // add the new view controller to the dictionary and then to the 'viewList' array
             [newItemDict setObject:targetViewController forKey:@"viewController"];
             [self.viewList replaceObjectAtIndex:kIASKSpecifierValuesViewControllerIndex withObject:newItemDict];
+            [targetViewController release];
             
             // load the view controll back in to push it
             targetViewController = [[self.viewList objectAtIndex:kIASKSpecifierValuesViewControllerIndex] objectForKey:@"viewController"];
@@ -561,7 +577,7 @@ CGRect IASKCGRectSwap(CGRect rect);
             if (!initSelector) {
                 initSelector = @selector(init);
             }
-            UIViewController * vc = [vcClass alloc];
+            UIViewController * vc = [vcClass performSelector:@selector(alloc)];
             [vc performSelector:initSelector withObject:[specifier file] withObject:[specifier key]];
 			if ([vc respondsToSelector:@selector(setDelegate:)]) {
 				[vc performSelector:@selector(setDelegate:) withObject:self.delegate];
@@ -571,6 +587,7 @@ CGRect IASKCGRectSwap(CGRect rect);
 			}
 			self.navigationController.delegate = nil;
             [self.navigationController pushViewController:vc animated:YES];
+            [vc performSelector:@selector(release)];
             return;
         }
         
@@ -595,6 +612,7 @@ CGRect IASKCGRectSwap(CGRect rect);
             // add the new view controller to the dictionary and then to the 'viewList' array
             [newItemDict setObject:targetViewController forKey:@"viewController"];
             [self.viewList replaceObjectAtIndex:kIASKSpecifierChildViewControllerIndex withObject:newItemDict];
+            [targetViewController release];
             
             // load the view controll back in to push it
             targetViewController = [[self.viewList objectAtIndex:kIASKSpecifierChildViewControllerIndex] objectForKey:@"viewController"];
@@ -622,59 +640,61 @@ CGRect IASKCGRectSwap(CGRect rect);
 		}
     } else if ([[specifier type] isEqualToString:kIASKMailComposeSpecifier]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//        if ([MFMailComposeViewController canSendMail]) {
-//            MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-//            mailViewController.navigationBar.barStyle = self.navigationController.navigationBar.barStyle;
-//			mailViewController.navigationBar.tintColor = self.navigationController.navigationBar.tintColor;
-//			
-//            if ([specifier localizedObjectForKey:kIASKMailComposeSubject]) {
-//                [mailViewController setSubject:[specifier localizedObjectForKey:kIASKMailComposeSubject]];
-//            }
-//            if ([[specifier specifierDict] objectForKey:kIASKMailComposeToRecipents]) {
-//                [mailViewController setToRecipients:[[specifier specifierDict] objectForKey:kIASKMailComposeToRecipents]];
-//            }
-//            if ([[specifier specifierDict] objectForKey:kIASKMailComposeCcRecipents]) {
-//                [mailViewController setCcRecipients:[[specifier specifierDict] objectForKey:kIASKMailComposeCcRecipents]];
-//            }
-//            if ([[specifier specifierDict] objectForKey:kIASKMailComposeBccRecipents]) {
-//                [mailViewController setBccRecipients:[[specifier specifierDict] objectForKey:kIASKMailComposeBccRecipents]];
-//            }
-//            if ([specifier localizedObjectForKey:kIASKMailComposeBody]) {
-//                BOOL isHTML = NO;
-//                if ([[specifier specifierDict] objectForKey:kIASKMailComposeBodyIsHTML]) {
-//                    isHTML = [[[specifier specifierDict] objectForKey:kIASKMailComposeBodyIsHTML] boolValue];
-//                }
-//                
-//              if ([self.delegate respondsToSelector:@selector(settingsViewController:mailComposeBodyForSpecifier:)]) {
-//                    [mailViewController setMessageBody:[self.delegate settingsViewController:self
-//                                                                 mailComposeBodyForSpecifier:specifier] isHTML:isHTML];
-//                }
-//                else {
-//                    [mailViewController setMessageBody:[specifier localizedObjectForKey:kIASKMailComposeBody] isHTML:isHTML];
-//                }
-//            }
-//
-//            UIViewController<MFMailComposeViewControllerDelegate> *vc = nil;
-//            
-//          if ([self.delegate respondsToSelector:@selector(settingsViewController:viewControllerForMailComposeViewForSpecifier:)]) {
-//            vc = [self.delegate settingsViewController:self viewControllerForMailComposeViewForSpecifier:specifier];
-//            }
-//            
-//            if (vc == nil) {
-//                vc = self;
-//            }
-//            
-//            mailViewController.mailComposeDelegate = vc;
-//            [vc presentModalViewController:mailViewController animated:YES];
-//        } else {
-//            UIAlertView *alert = [[UIAlertView alloc]
-//                                  initWithTitle:NSLocalizedString(@"Mail not configured", @"InAppSettingsKit")
-//                                  message:NSLocalizedString(@"This device is not configured for sending Email. Please configure the Mail settings in the Settings app.", @"InAppSettingsKit")
-//                                  delegate: nil
-//                                  cancelButtonTitle:NSLocalizedString(@"OK", @"InAppSettingsKit")
-//                                  otherButtonTitles:nil];
-//            [alert show];
-//        }
+        if ([MFMailComposeViewController canSendMail]) {
+            MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+            mailViewController.navigationBar.barStyle = self.navigationController.navigationBar.barStyle;
+			mailViewController.navigationBar.tintColor = self.navigationController.navigationBar.tintColor;
+			
+            if ([specifier localizedObjectForKey:kIASKMailComposeSubject]) {
+                [mailViewController setSubject:[specifier localizedObjectForKey:kIASKMailComposeSubject]];
+            }
+            if ([[specifier specifierDict] objectForKey:kIASKMailComposeToRecipents]) {
+                [mailViewController setToRecipients:[[specifier specifierDict] objectForKey:kIASKMailComposeToRecipents]];
+            }
+            if ([[specifier specifierDict] objectForKey:kIASKMailComposeCcRecipents]) {
+                [mailViewController setCcRecipients:[[specifier specifierDict] objectForKey:kIASKMailComposeCcRecipents]];
+            }
+            if ([[specifier specifierDict] objectForKey:kIASKMailComposeBccRecipents]) {
+                [mailViewController setBccRecipients:[[specifier specifierDict] objectForKey:kIASKMailComposeBccRecipents]];
+            }
+            if ([specifier localizedObjectForKey:kIASKMailComposeBody]) {
+                BOOL isHTML = NO;
+                if ([[specifier specifierDict] objectForKey:kIASKMailComposeBodyIsHTML]) {
+                    isHTML = [[[specifier specifierDict] objectForKey:kIASKMailComposeBodyIsHTML] boolValue];
+                }
+                
+              if ([self.delegate respondsToSelector:@selector(settingsViewController:mailComposeBodyForSpecifier:)]) {
+                    [mailViewController setMessageBody:[self.delegate settingsViewController:self
+                                                                 mailComposeBodyForSpecifier:specifier] isHTML:isHTML];
+                }
+                else {
+                    [mailViewController setMessageBody:[specifier localizedObjectForKey:kIASKMailComposeBody] isHTML:isHTML];
+                }
+            }
+
+            UIViewController<MFMailComposeViewControllerDelegate> *vc = nil;
+            
+          if ([self.delegate respondsToSelector:@selector(settingsViewController:viewControllerForMailComposeViewForSpecifier:)]) {
+            vc = [self.delegate settingsViewController:self viewControllerForMailComposeViewForSpecifier:specifier];
+            }
+            
+            if (vc == nil) {
+                vc = self;
+            }
+            
+            mailViewController.mailComposeDelegate = vc;
+            [vc presentModalViewController:mailViewController animated:YES];
+            [mailViewController release];
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:NSLocalizedString(@"Mail not configured", @"InAppSettingsKit")
+                                  message:NSLocalizedString(@"This device is not configured for sending Email. Please configure the Mail settings in the Settings app.", @"InAppSettingsKit")
+                                  delegate: nil
+                                  cancelButtonTitle:NSLocalizedString(@"OK", @"InAppSettingsKit")
+                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        }
 
 	} else if ([[specifier type] isEqualToString:kIASKCustomViewSpecifier] && [self.delegate respondsToSelector:@selector(settingsViewController:tableView:didSelectCustomViewSpecifier:)]) {
         [self.delegate settingsViewController:self tableView:tableView didSelectCustomViewSpecifier:specifier];
@@ -687,6 +707,19 @@ CGRect IASKCGRectSwap(CGRect rect);
 #pragma mark -
 #pragma mark MFMailComposeViewControllerDelegate Function
 
+-(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    
+    // Forward the mail compose delegate
+    if ([self.delegate respondsToSelector:@selector(settingsViewController:mailComposeController:didFinishWithResult:error:)]) {
+         [self.delegate settingsViewController:self 
+                         mailComposeController:controller 
+                           didFinishWithResult:result 
+                                         error:error];
+     }
+    
+    // NOTE: No error handling is done here
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 #pragma mark -
 #pragma mark UITextFieldDelegate Functions
@@ -730,6 +763,7 @@ static NSDictionary *oldUserDefaults = nil;
 			}
 		}
 	}
+	[oldUserDefaults release], oldUserDefaults = [currentDict retain];
 	
 	
 	for (UITableViewCell *cell in self.tableView.visibleCells) {

@@ -44,7 +44,7 @@ dataSource=_dataSource;
 		self.path = [self locateSettingsFile: file];
 		[self setSettingsBundle:[NSDictionary dictionaryWithContentsOfFile:self.path]];
 		self.bundlePath = [self.path stringByDeletingLastPathComponent];
-		_bundle = [NSBundle bundleWithPath:[self bundlePath]];
+		_bundle = [[NSBundle bundleWithPath:[self bundlePath]] retain];
 		
 		// Look for localization file
 		self.localizationTable = [self.settingsBundle objectForKey:@"StringsTable"];
@@ -68,11 +68,21 @@ dataSource=_dataSource;
 	return self;
 }
 
+- (void)dealloc {
+	[_path release], _path = nil;
+	[_localizationTable release], _localizationTable = nil;
+	[_bundlePath release], _bundlePath = nil;
+	[_settingsBundle release], _settingsBundle = nil;
+	[_dataSource release], _dataSource = nil;
+	[_bundle release], _bundle = nil;
+
+	[super dealloc];
+}
 
 - (void)_reinterpretBundle:(NSDictionary*)settingsBundle {
 	NSArray *preferenceSpecifiers	= [settingsBundle objectForKey:kIASKPreferenceSpecifiers];
 	NSInteger sectionCount			= -1;
-	NSMutableArray *dataSource		= [[NSMutableArray alloc] init] ;
+	NSMutableArray *dataSource		= [[[NSMutableArray alloc] init] autorelease];
 	
 	for (NSDictionary *specifier in preferenceSpecifiers) {
 		if ([(NSString*)[specifier objectForKey:kIASKType] isEqualToString:kIASKPSGroupSpecifier]) {
@@ -80,17 +90,20 @@ dataSource=_dataSource;
 			
 			[newArray addObject:specifier];
 			[dataSource addObject:newArray];
+			[newArray release];
 			sectionCount++;
 		}
 		else {
 			if (sectionCount == -1) {
 				NSMutableArray *newArray = [[NSMutableArray alloc] init];
 				[dataSource addObject:newArray];
+				[newArray release];
 				sectionCount++;
 			}
 
 			IASKSpecifier *newSpecifier = [[IASKSpecifier alloc] initWithSpecifier:specifier];
 			[(NSMutableArray*)[dataSource objectAtIndex:sectionCount] addObject:newSpecifier];
+			[newSpecifier release];
 		}
 	}
 	[self setDataSource:dataSource];
