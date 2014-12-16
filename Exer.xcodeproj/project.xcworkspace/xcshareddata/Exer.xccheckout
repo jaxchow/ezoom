@@ -22,7 +22,7 @@
 		<key>3A6FC8C82E5F68A277C2EC63750A409AD4A946AD</key>
 		<string>../..</string>
 		<key>93596bd2-0dc3-f74b-bcd7-aa8426d3b99b++8664</key>
-		<string>../..json/</string>
+		<string>../..json</string>
 	</dict>
 	<key>IDESourceControlProjectRepositoryRootDictionary</key>
 	<dict>
@@ -51,7 +51,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>93596bd2-0dc3-f74b-bcd7-aa8426d3b99b++8664</string>
 			<key>IDESourceControlWCCName</key>
-			<string>json</string>
+			<string>ezoomjson</string>
 		</dict>
 	</array>
 </dict>

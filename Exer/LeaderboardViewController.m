@@ -14,10 +14,12 @@
 #import "UIImageView+WebCache.h"
 #import "LeaderboardModel.h"
 #import "LeaderboardCellTableViewCell.h"
+#import "MJRefresh.h"
 
 @interface LeaderboardViewController ()<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate>{
     UITableView *_tableView;
     NSMutableArray *_saveDataArray;
+    ASIHTTPRequest *httpRequest;
 }
 
 @end
@@ -53,57 +55,78 @@
     [_tableView registerNib:[UINib nibWithNibName:@"LeaderboardCellTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
     
     //请求类
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:movieURL]];
+    httpRequest = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:movieURL]];
     
     //
-    request.delegate = self;
+    httpRequest.delegate = self;
     //异步发送请求
-    [request startAsynchronous];
+    [httpRequest startSynchronous];
+    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
+    // 2.集成刷新控件
+    [self setupRefresh];
     
 }
 
-#pragma mark - ASIHTTPRequestDelegate
-- (void)requestFinished:(ASIHTTPRequest *)request
+- (void)setupRefresh
 {
-    NSDictionary *jsonDict = [request.responseString  JSONValue];
+    // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
+    [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+#warning 自动刷新(一进入程序就下拉刷新)
+    [_tableView headerBeginRefreshing];
     
-    NSArray *movieArray = jsonDict[@"subjects"];
+    // 2.上拉加载更多(进入刷新状态就会调用self的footerRereshing)
+    //[self.tableView addFooterWithTarget:self action:@selector(footerRereshing)];
     
-    for (NSDictionary *dict  in movieArray)
-    {
-        LeaderboardModel *model = [[LeaderboardModel alloc] init];
-        model.userName = dict[@"title"];
-        model.userGroup = dict[@"year"];
-        model.userAvatar = dict[@"images"][@"large"];
+    // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
+    _tableView.headerPullToRefreshText = @"下拉可以刷新了";
+    _tableView.headerReleaseToRefreshText = @"松开马上刷新了";
+    _tableView.headerRefreshingText = @"MJ哥正在帮你刷新中,不客气";
+    
+//    self.tableView.footerPullToRefreshText = @"上拉可以加载更多数据了";
+//    self.tableView.footerReleaseToRefreshText = @"松开马上加载更多数据了";
+//    self.tableView.footerRefreshingText = @"MJ哥正在帮你加载中,不客气";
+}
+
+#pragma mark 开始进入刷新状态
+- (void)headerRereshing
+{
+    httpRequest = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:movieURL]];
+    [httpRequest startSynchronous];
+    
+    NSError *error = [httpRequest error];
+    
+    if (!error) {
+        [_saveDataArray removeAllObjects];
+        NSDictionary *jsonDict = [httpRequest.responseString  JSONValue];
         
-        [_saveDataArray addObject:model];
+        NSArray *movieArray = jsonDict[@"subjects"];
+        
+        
+        for (NSDictionary *dict  in movieArray)
+        {
+            LeaderboardModel *model = [[LeaderboardModel alloc] init];
+            model.userName = dict[@"title"];
+            model.userGroup = dict[@"year"];
+            model.userAvatar = dict[@"images"][@"large"];
+            
+            [_saveDataArray addObject:model];
+        }
+//         [_saveDataArray insertObject:movieArray atIndex:0];
+
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            // 刷新表格
+            [_tableView reloadData];
+            
+            // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+            [_tableView headerEndRefreshing];
+        });
     }
-    //刷新表
-    [_tableView reloadData];
-}
--(void)handleData
-{
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MMM d, h:mm:ss a"];
-    NSString *lastUpdated = [NSString stringWithFormat:@"Last updated on %@", [formatter stringFromDate:[NSDate date]]];
-
-    [_tableView reloadData];
+    
+    // 2.2秒后刷新表格UI
+    
 }
 
-
-
-- (void)requestFailed:(ASIHTTPRequest *)request
-{
-    NSLog(@"请求失败");
-}
-
--(void)refreshView:(UIRefreshControl *)refresh
-{
-    if (refresh.refreshing) {
-        refresh.attributedTitle = [[NSAttributedString alloc]initWithString:@"Refreshing data..."];
-        [self performSelector:@selector(handleData) withObject:nil afterDelay:2];
-    }
-}
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -115,15 +138,43 @@
 {
     LeaderboardCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    LeaderboardModel *model = _saveDataArray[indexPath.row];
-    
-    cell.userName.text = model.userName;
-    cell.userGroup.text = model.userGroup;
-    cell.weekScore.text =[NSString stringWithFormat: @"%d名", indexPath.row+1];
-    [cell.userAvatar sd_setImageWithURL:[NSURL URLWithString:model.userAvatar] placeholderImage:[UIImage imageNamed:@"photo"]];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-   // cell.accessoryView=
+    if(_saveDataArray.count>0){
+        LeaderboardModel *model = _saveDataArray[indexPath.row];
+        
+        cell.userName.text = model.userName;
+        cell.userGroup.text = model.userGroup;
+        cell.weekScore.text =[NSString stringWithFormat: @"%d名", indexPath.row+1];
+        [cell.userAvatar sd_setImageWithURL:[NSURL URLWithString:model.userAvatar] placeholderImage:[UIImage imageNamed:@"photo"]];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+   
     return cell;
+}
+
+
+#pragma mark - ASIHTTPRequestDelegate
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
+    NSDictionary *jsonDict = [request.responseString  JSONValue];
+    
+    NSArray *movieArray = jsonDict[@"subjects"];
+    
+    
+    for (NSDictionary *dict  in movieArray)
+    {
+        LeaderboardModel *model = [[LeaderboardModel alloc] init];
+        model.userName = dict[@"title"];
+        model.userGroup = dict[@"year"];
+        model.userAvatar = dict[@"images"][@"large"];
+        
+        [_saveDataArray addObject:model];
+    }
+     [_tableView reloadData];
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)request
+{
+    NSLog(@"请求失败");
 }
 
 -(void)openView
