@@ -95,7 +95,6 @@
     [httpRequest startSynchronous];
     
     NSError *error = [httpRequest error];
-    
     if (!error) {
         [_saveDataArray removeAllObjects];
         NSDictionary *jsonDict = [httpRequest.responseString  JSONValue];

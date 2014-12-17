@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "IASKAppSettingsViewController.h"
+#import "RETableViewManager.h"
 
-@interface AppSettingsViewController : UIViewController<IASKSettingsDelegate,UITextViewDelegate>{
-    IASKAppSettingsViewController  *appSettingsViewController;
+@interface AppSettingsViewController : UITableViewController <RETableViewManagerDelegate>{
 }
-@property (nonatomic, retain) IASKAppSettingsViewController *appSettingsViewController;
+
+@property (strong, readonly, nonatomic) RETableViewManager *manager;
+@property (strong, readwrite, nonatomic) RETableViewSection *accountSection;
+@property (strong, readwrite, nonatomic) RETableViewSection *profileSection;
+@property (strong, readwrite, nonatomic) RETableViewSection *serviceSection;
+@property (strong, readwrite, nonatomic) RETableViewSection *buttomSection;
+
 -(void) openView;
 @end

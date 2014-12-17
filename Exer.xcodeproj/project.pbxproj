@@ -57,6 +57,42 @@
 		04B53CAC19B9E85500A4CBD5 /* SYMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B53CAB19B9E85500A4CBD5 /* SYMovieModel.m */; };
 		04B53CB019B9E9DA00A4CBD5 /* SYCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B53CAE19B9E9DA00A4CBD5 /* SYCell.m */; };
 		04B53CB119B9E9DA00A4CBD5 /* SYCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B53CAF19B9E9DA00A4CBD5 /* SYCell.xib */; };
+		BD0BB1331A4113AB00E5A3EF /* RETableViewBoolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1001A4113AB00E5A3EF /* RETableViewBoolCell.m */; };
+		BD0BB1341A4113AB00E5A3EF /* RETableViewCreditCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1021A4113AB00E5A3EF /* RETableViewCreditCardCell.m */; };
+		BD0BB1351A4113AB00E5A3EF /* RETableViewDateTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1041A4113AB00E5A3EF /* RETableViewDateTimeCell.m */; };
+		BD0BB1361A4113AB00E5A3EF /* RETableViewFloatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1061A4113AB00E5A3EF /* RETableViewFloatCell.m */; };
+		BD0BB1371A4113AB00E5A3EF /* RETableViewLongTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1081A4113AB00E5A3EF /* RETableViewLongTextCell.m */; };
+		BD0BB1381A4113AB00E5A3EF /* RETableViewNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB10A1A4113AB00E5A3EF /* RETableViewNumberCell.m */; };
+		BD0BB1391A4113AB00E5A3EF /* RETableViewOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB10C1A4113AB00E5A3EF /* RETableViewOptionCell.m */; };
+		BD0BB13A1A4113AB00E5A3EF /* RETableViewTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB10E1A4113AB00E5A3EF /* RETableViewTextCell.m */; };
+		BD0BB13B1A4113AB00E5A3EF /* REBoolItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1111A4113AB00E5A3EF /* REBoolItem.m */; };
+		BD0BB13C1A4113AB00E5A3EF /* RECreditCardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1131A4113AB00E5A3EF /* RECreditCardItem.m */; };
+		BD0BB13D1A4113AB00E5A3EF /* REDateTimeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1151A4113AB00E5A3EF /* REDateTimeItem.m */; };
+		BD0BB13E1A4113AC00E5A3EF /* REFloatItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1171A4113AB00E5A3EF /* REFloatItem.m */; };
+		BD0BB13F1A4113AC00E5A3EF /* RELongTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1191A4113AB00E5A3EF /* RELongTextItem.m */; };
+		BD0BB1401A4113AC00E5A3EF /* REMultipleChoiceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB11B1A4113AB00E5A3EF /* REMultipleChoiceItem.m */; };
+		BD0BB1411A4113AC00E5A3EF /* RENumberItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB11D1A4113AB00E5A3EF /* RENumberItem.m */; };
+		BD0BB1421A4113AC00E5A3EF /* RERadioItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB11F1A4113AB00E5A3EF /* RERadioItem.m */; };
+		BD0BB1431A4113AC00E5A3EF /* RETextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1211A4113AB00E5A3EF /* RETextItem.m */; };
+		BD0BB1441A4113AC00E5A3EF /* REActionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1231A4113AB00E5A3EF /* REActionBar.m */; };
+		BD0BB1451A4113AC00E5A3EF /* REPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1251A4113AB00E5A3EF /* REPlaceholderTextView.m */; };
+		BD0BB1461A4113AC00E5A3EF /* RETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1271A4113AB00E5A3EF /* RETableViewCell.m */; };
+		BD0BB1471A4113AC00E5A3EF /* RETableViewCellStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1291A4113AB00E5A3EF /* RETableViewCellStyle.m */; };
+		BD0BB1481A4113AC00E5A3EF /* RETableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB12B1A4113AB00E5A3EF /* RETableViewItem.m */; };
+		BD0BB1491A4113AC00E5A3EF /* RETableViewManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD0BB12C1A4113AB00E5A3EF /* RETableViewManager.bundle */; };
+		BD0BB14A1A4113AC00E5A3EF /* RETableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB12E1A4113AB00E5A3EF /* RETableViewManager.m */; };
+		BD0BB14B1A4113AC00E5A3EF /* RETableViewOptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1301A4113AB00E5A3EF /* RETableViewOptionsController.m */; };
+		BD0BB14C1A4113AC00E5A3EF /* RETableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1321A4113AB00E5A3EF /* RETableViewSection.m */; };
+		BD0BB15F1A41166C00E5A3EF /* REFormattedNumberField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1501A41166C00E5A3EF /* REFormattedNumberField.m */; };
+		BD0BB1601A41166C00E5A3EF /* NSError+REValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1531A41166C00E5A3EF /* NSError+REValidation.m */; };
+		BD0BB1611A41166C00E5A3EF /* REValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1551A41166C00E5A3EF /* REValidation.m */; };
+		BD0BB1621A41166C00E5A3EF /* REValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1571A41166C00E5A3EF /* REValidator.m */; };
+		BD0BB1631A41166C00E5A3EF /* REEmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB15A1A41166C00E5A3EF /* REEmailValidator.m */; };
+		BD0BB1641A41166C00E5A3EF /* RELengthValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB15C1A41166C00E5A3EF /* RELengthValidator.m */; };
+		BD0BB1651A41166C00E5A3EF /* REPresenceValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB15E1A41166C00E5A3EF /* REPresenceValidator.m */; };
+		BD0BB1681A411AD600E5A3EF /* RELabelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB1671A411AD600E5A3EF /* RELabelItem.m */; };
+		BD0BB16B1A412FE100E5A3EF /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB16A1A412FE100E5A3EF /* ModifyPasswordViewController.m */; };
+		BD0BB16E1A4158A100E5A3EF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB16D1A4158A100E5A3EF /* ProfileViewController.m */; };
 		BD340D761A3EA0B10094D454 /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D4F1A3EA0B10094D454 /* IASKAppSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BD340D771A3EA0B10094D454 /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D511A3EA0B10094D454 /* IASKAppSettingsWebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BD340D781A3EA0B10094D454 /* IASKSpecifierValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD340D531A3EA0B10094D454 /* IASKSpecifierValuesViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -138,6 +174,9 @@
 		BD63C9921A3EC5D00084666F /* CouponDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD63C9901A3EC5D00084666F /* CouponDetailViewController.xib */; };
 		BD63C9A41A3F25880084666F /* MainUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63C9A21A3F25880084666F /* MainUserView.m */; };
 		BD63C9A51A3F25880084666F /* MainUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD63C9A31A3F25880084666F /* MainUserView.xib */; };
+		BD9391561A417C4900641343 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9391551A417C4900641343 /* ScoreViewController.m */; };
+		BD93915A1A41BA2D00641343 /* ScoreRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9391581A41BA2D00641343 /* ScoreRulesViewController.m */; };
+		BD93915B1A41BA2D00641343 /* ScoreRulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9391591A41BA2D00641343 /* ScoreRulesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +284,77 @@
 		04B53CAD19B9E9DA00A4CBD5 /* SYCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCell.h; sourceTree = "<group>"; };
 		04B53CAE19B9E9DA00A4CBD5 /* SYCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCell.m; sourceTree = "<group>"; };
 		04B53CAF19B9E9DA00A4CBD5 /* SYCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYCell.xib; sourceTree = "<group>"; };
+		BD0BB0FF1A4113AB00E5A3EF /* RETableViewBoolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewBoolCell.h; sourceTree = "<group>"; };
+		BD0BB1001A4113AB00E5A3EF /* RETableViewBoolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewBoolCell.m; sourceTree = "<group>"; };
+		BD0BB1011A4113AB00E5A3EF /* RETableViewCreditCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewCreditCardCell.h; sourceTree = "<group>"; };
+		BD0BB1021A4113AB00E5A3EF /* RETableViewCreditCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewCreditCardCell.m; sourceTree = "<group>"; };
+		BD0BB1031A4113AB00E5A3EF /* RETableViewDateTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewDateTimeCell.h; sourceTree = "<group>"; };
+		BD0BB1041A4113AB00E5A3EF /* RETableViewDateTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewDateTimeCell.m; sourceTree = "<group>"; };
+		BD0BB1051A4113AB00E5A3EF /* RETableViewFloatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewFloatCell.h; sourceTree = "<group>"; };
+		BD0BB1061A4113AB00E5A3EF /* RETableViewFloatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewFloatCell.m; sourceTree = "<group>"; };
+		BD0BB1071A4113AB00E5A3EF /* RETableViewLongTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewLongTextCell.h; sourceTree = "<group>"; };
+		BD0BB1081A4113AB00E5A3EF /* RETableViewLongTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewLongTextCell.m; sourceTree = "<group>"; };
+		BD0BB1091A4113AB00E5A3EF /* RETableViewNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewNumberCell.h; sourceTree = "<group>"; };
+		BD0BB10A1A4113AB00E5A3EF /* RETableViewNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewNumberCell.m; sourceTree = "<group>"; };
+		BD0BB10B1A4113AB00E5A3EF /* RETableViewOptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewOptionCell.h; sourceTree = "<group>"; };
+		BD0BB10C1A4113AB00E5A3EF /* RETableViewOptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewOptionCell.m; sourceTree = "<group>"; };
+		BD0BB10D1A4113AB00E5A3EF /* RETableViewTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewTextCell.h; sourceTree = "<group>"; };
+		BD0BB10E1A4113AB00E5A3EF /* RETableViewTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewTextCell.m; sourceTree = "<group>"; };
+		BD0BB1101A4113AB00E5A3EF /* REBoolItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REBoolItem.h; sourceTree = "<group>"; };
+		BD0BB1111A4113AB00E5A3EF /* REBoolItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REBoolItem.m; sourceTree = "<group>"; };
+		BD0BB1121A4113AB00E5A3EF /* RECreditCardItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECreditCardItem.h; sourceTree = "<group>"; };
+		BD0BB1131A4113AB00E5A3EF /* RECreditCardItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECreditCardItem.m; sourceTree = "<group>"; };
+		BD0BB1141A4113AB00E5A3EF /* REDateTimeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDateTimeItem.h; sourceTree = "<group>"; };
+		BD0BB1151A4113AB00E5A3EF /* REDateTimeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDateTimeItem.m; sourceTree = "<group>"; };
+		BD0BB1161A4113AB00E5A3EF /* REFloatItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFloatItem.h; sourceTree = "<group>"; };
+		BD0BB1171A4113AB00E5A3EF /* REFloatItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REFloatItem.m; sourceTree = "<group>"; };
+		BD0BB1181A4113AB00E5A3EF /* RELongTextItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RELongTextItem.h; sourceTree = "<group>"; };
+		BD0BB1191A4113AB00E5A3EF /* RELongTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RELongTextItem.m; sourceTree = "<group>"; };
+		BD0BB11A1A4113AB00E5A3EF /* REMultipleChoiceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMultipleChoiceItem.h; sourceTree = "<group>"; };
+		BD0BB11B1A4113AB00E5A3EF /* REMultipleChoiceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMultipleChoiceItem.m; sourceTree = "<group>"; };
+		BD0BB11C1A4113AB00E5A3EF /* RENumberItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RENumberItem.h; sourceTree = "<group>"; };
+		BD0BB11D1A4113AB00E5A3EF /* RENumberItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RENumberItem.m; sourceTree = "<group>"; };
+		BD0BB11E1A4113AB00E5A3EF /* RERadioItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RERadioItem.h; sourceTree = "<group>"; };
+		BD0BB11F1A4113AB00E5A3EF /* RERadioItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RERadioItem.m; sourceTree = "<group>"; };
+		BD0BB1201A4113AB00E5A3EF /* RETextItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETextItem.h; sourceTree = "<group>"; };
+		BD0BB1211A4113AB00E5A3EF /* RETextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETextItem.m; sourceTree = "<group>"; };
+		BD0BB1221A4113AB00E5A3EF /* REActionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REActionBar.h; sourceTree = "<group>"; };
+		BD0BB1231A4113AB00E5A3EF /* REActionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REActionBar.m; sourceTree = "<group>"; };
+		BD0BB1241A4113AB00E5A3EF /* REPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPlaceholderTextView.h; sourceTree = "<group>"; };
+		BD0BB1251A4113AB00E5A3EF /* REPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPlaceholderTextView.m; sourceTree = "<group>"; };
+		BD0BB1261A4113AB00E5A3EF /* RETableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewCell.h; sourceTree = "<group>"; };
+		BD0BB1271A4113AB00E5A3EF /* RETableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewCell.m; sourceTree = "<group>"; };
+		BD0BB1281A4113AB00E5A3EF /* RETableViewCellStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewCellStyle.h; sourceTree = "<group>"; };
+		BD0BB1291A4113AB00E5A3EF /* RETableViewCellStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewCellStyle.m; sourceTree = "<group>"; };
+		BD0BB12A1A4113AB00E5A3EF /* RETableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewItem.h; sourceTree = "<group>"; };
+		BD0BB12B1A4113AB00E5A3EF /* RETableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewItem.m; sourceTree = "<group>"; };
+		BD0BB12C1A4113AB00E5A3EF /* RETableViewManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RETableViewManager.bundle; sourceTree = "<group>"; };
+		BD0BB12D1A4113AB00E5A3EF /* RETableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewManager.h; sourceTree = "<group>"; };
+		BD0BB12E1A4113AB00E5A3EF /* RETableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewManager.m; sourceTree = "<group>"; };
+		BD0BB12F1A4113AB00E5A3EF /* RETableViewOptionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewOptionsController.h; sourceTree = "<group>"; };
+		BD0BB1301A4113AB00E5A3EF /* RETableViewOptionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewOptionsController.m; sourceTree = "<group>"; };
+		BD0BB1311A4113AB00E5A3EF /* RETableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RETableViewSection.h; sourceTree = "<group>"; };
+		BD0BB1321A4113AB00E5A3EF /* RETableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RETableViewSection.m; sourceTree = "<group>"; };
+		BD0BB14F1A41166C00E5A3EF /* REFormattedNumberField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFormattedNumberField.h; sourceTree = "<group>"; };
+		BD0BB1501A41166C00E5A3EF /* REFormattedNumberField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REFormattedNumberField.m; sourceTree = "<group>"; };
+		BD0BB1521A41166C00E5A3EF /* NSError+REValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+REValidation.h"; sourceTree = "<group>"; };
+		BD0BB1531A41166C00E5A3EF /* NSError+REValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+REValidation.m"; sourceTree = "<group>"; };
+		BD0BB1541A41166C00E5A3EF /* REValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REValidation.h; sourceTree = "<group>"; };
+		BD0BB1551A41166C00E5A3EF /* REValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REValidation.m; sourceTree = "<group>"; };
+		BD0BB1561A41166C00E5A3EF /* REValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REValidator.h; sourceTree = "<group>"; };
+		BD0BB1571A41166C00E5A3EF /* REValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REValidator.m; sourceTree = "<group>"; };
+		BD0BB1591A41166C00E5A3EF /* REEmailValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REEmailValidator.h; sourceTree = "<group>"; };
+		BD0BB15A1A41166C00E5A3EF /* REEmailValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REEmailValidator.m; sourceTree = "<group>"; };
+		BD0BB15B1A41166C00E5A3EF /* RELengthValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RELengthValidator.h; sourceTree = "<group>"; };
+		BD0BB15C1A41166C00E5A3EF /* RELengthValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RELengthValidator.m; sourceTree = "<group>"; };
+		BD0BB15D1A41166C00E5A3EF /* REPresenceValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPresenceValidator.h; sourceTree = "<group>"; };
+		BD0BB15E1A41166C00E5A3EF /* REPresenceValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPresenceValidator.m; sourceTree = "<group>"; };
+		BD0BB1661A411AD600E5A3EF /* RELabelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RELabelItem.h; sourceTree = "<group>"; };
+		BD0BB1671A411AD600E5A3EF /* RELabelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RELabelItem.m; sourceTree = "<group>"; };
+		BD0BB1691A412FE100E5A3EF /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
+		BD0BB16A1A412FE100E5A3EF /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordViewController.m; sourceTree = "<group>"; };
+		BD0BB16C1A4158A100E5A3EF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		BD0BB16D1A4158A100E5A3EF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		BD340D4E1A3EA0B10094D454 /* IASKAppSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsViewController.h; sourceTree = "<group>"; };
 		BD340D4F1A3EA0B10094D454 /* IASKAppSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKAppSettingsViewController.m; sourceTree = "<group>"; };
 		BD340D501A3EA0B10094D454 /* IASKAppSettingsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsWebViewController.h; sourceTree = "<group>"; };
@@ -377,6 +487,11 @@
 		BD63C9A11A3F25880084666F /* MainUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainUserView.h; sourceTree = "<group>"; };
 		BD63C9A21A3F25880084666F /* MainUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainUserView.m; sourceTree = "<group>"; };
 		BD63C9A31A3F25880084666F /* MainUserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainUserView.xib; sourceTree = "<group>"; };
+		BD9391541A417C4900641343 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
+		BD9391551A417C4900641343 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
+		BD9391571A41BA2D00641343 /* ScoreRulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreRulesViewController.h; sourceTree = "<group>"; };
+		BD9391581A41BA2D00641343 /* ScoreRulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreRulesViewController.m; sourceTree = "<group>"; };
+		BD9391591A41BA2D00641343 /* ScoreRulesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreRulesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -438,6 +553,7 @@
 		048A004519B9BCB70014A832 = {
 			isa = PBXGroup;
 			children = (
+				BD0BB0FD1A4113AB00E5A3EF /* RETableViewManager */,
 				BD4BB95D1A3FFD940080E5DA /* MJRefresh */,
 				BD340D4C1A3EA0B10094D454 /* InAppSettingsKit */,
 				BD47DCD41A39D0EC0022776E /* MyLauncher */,
@@ -627,6 +743,128 @@
 			path = json;
 			sourceTree = "<group>";
 		};
+		BD0BB0FD1A4113AB00E5A3EF /* RETableViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BB14D1A41166C00E5A3EF /* Vendor */,
+				BD0BB0FE1A4113AB00E5A3EF /* Cells */,
+				BD0BB10F1A4113AB00E5A3EF /* Items */,
+				BD0BB1221A4113AB00E5A3EF /* REActionBar.h */,
+				BD0BB1231A4113AB00E5A3EF /* REActionBar.m */,
+				BD0BB1241A4113AB00E5A3EF /* REPlaceholderTextView.h */,
+				BD0BB1251A4113AB00E5A3EF /* REPlaceholderTextView.m */,
+				BD0BB1261A4113AB00E5A3EF /* RETableViewCell.h */,
+				BD0BB1271A4113AB00E5A3EF /* RETableViewCell.m */,
+				BD0BB1281A4113AB00E5A3EF /* RETableViewCellStyle.h */,
+				BD0BB1291A4113AB00E5A3EF /* RETableViewCellStyle.m */,
+				BD0BB12A1A4113AB00E5A3EF /* RETableViewItem.h */,
+				BD0BB12B1A4113AB00E5A3EF /* RETableViewItem.m */,
+				BD0BB12C1A4113AB00E5A3EF /* RETableViewManager.bundle */,
+				BD0BB12D1A4113AB00E5A3EF /* RETableViewManager.h */,
+				BD0BB12E1A4113AB00E5A3EF /* RETableViewManager.m */,
+				BD0BB12F1A4113AB00E5A3EF /* RETableViewOptionsController.h */,
+				BD0BB1301A4113AB00E5A3EF /* RETableViewOptionsController.m */,
+				BD0BB1311A4113AB00E5A3EF /* RETableViewSection.h */,
+				BD0BB1321A4113AB00E5A3EF /* RETableViewSection.m */,
+			);
+			path = RETableViewManager;
+			sourceTree = "<group>";
+		};
+		BD0BB0FE1A4113AB00E5A3EF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BB0FF1A4113AB00E5A3EF /* RETableViewBoolCell.h */,
+				BD0BB1001A4113AB00E5A3EF /* RETableViewBoolCell.m */,
+				BD0BB1011A4113AB00E5A3EF /* RETableViewCreditCardCell.h */,
+				BD0BB1021A4113AB00E5A3EF /* RETableViewCreditCardCell.m */,
+				BD0BB1031A4113AB00E5A3EF /* RETableViewDateTimeCell.h */,
+				BD0BB1041A4113AB00E5A3EF /* RETableViewDateTimeCell.m */,
+				BD0BB1051A4113AB00E5A3EF /* RETableViewFloatCell.h */,
+				BD0BB1061A4113AB00E5A3EF /* RETableViewFloatCell.m */,
+				BD0BB1071A4113AB00E5A3EF /* RETableViewLongTextCell.h */,
+				BD0BB1081A4113AB00E5A3EF /* RETableViewLongTextCell.m */,
+				BD0BB1091A4113AB00E5A3EF /* RETableViewNumberCell.h */,
+				BD0BB10A1A4113AB00E5A3EF /* RETableViewNumberCell.m */,
+				BD0BB10B1A4113AB00E5A3EF /* RETableViewOptionCell.h */,
+				BD0BB10C1A4113AB00E5A3EF /* RETableViewOptionCell.m */,
+				BD0BB10D1A4113AB00E5A3EF /* RETableViewTextCell.h */,
+				BD0BB10E1A4113AB00E5A3EF /* RETableViewTextCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BD0BB10F1A4113AB00E5A3EF /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BB1101A4113AB00E5A3EF /* REBoolItem.h */,
+				BD0BB1111A4113AB00E5A3EF /* REBoolItem.m */,
+				BD0BB1121A4113AB00E5A3EF /* RECreditCardItem.h */,
+				BD0BB1131A4113AB00E5A3EF /* RECreditCardItem.m */,
+				BD0BB1141A4113AB00E5A3EF /* REDateTimeItem.h */,
+				BD0BB1151A4113AB00E5A3EF /* REDateTimeItem.m */,
+				BD0BB1161A4113AB00E5A3EF /* REFloatItem.h */,
+				BD0BB1171A4113AB00E5A3EF /* REFloatItem.m */,
+				BD0BB1181A4113AB00E5A3EF /* RELongTextItem.h */,
+				BD0BB1191A4113AB00E5A3EF /* RELongTextItem.m */,
+				BD0BB11A1A4113AB00E5A3EF /* REMultipleChoiceItem.h */,
+				BD0BB11B1A4113AB00E5A3EF /* REMultipleChoiceItem.m */,
+				BD0BB11C1A4113AB00E5A3EF /* RENumberItem.h */,
+				BD0BB11D1A4113AB00E5A3EF /* RENumberItem.m */,
+				BD0BB11E1A4113AB00E5A3EF /* RERadioItem.h */,
+				BD0BB11F1A4113AB00E5A3EF /* RERadioItem.m */,
+				BD0BB1201A4113AB00E5A3EF /* RETextItem.h */,
+				BD0BB1211A4113AB00E5A3EF /* RETextItem.m */,
+				BD0BB1661A411AD600E5A3EF /* RELabelItem.h */,
+				BD0BB1671A411AD600E5A3EF /* RELabelItem.m */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		BD0BB14D1A41166C00E5A3EF /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BB14E1A41166C00E5A3EF /* REFormattedNumberField */,
+				BD0BB1511A41166C00E5A3EF /* REValidation */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		BD0BB14E1A41166C00E5A3EF /* REFormattedNumberField */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BB14F1A41166C00E5A3EF /* REFormattedNumberField.h */,
+				BD0BB1501A41166C00E5A3EF /* REFormattedNumberField.m */,
+			);
+			path = REFormattedNumberField;
+			sourceTree = "<group>";
+		};
+		BD0BB1511A41166C00E5A3EF /* REValidation */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BB1521A41166C00E5A3EF /* NSError+REValidation.h */,
+				BD0BB1531A41166C00E5A3EF /* NSError+REValidation.m */,
+				BD0BB1541A41166C00E5A3EF /* REValidation.h */,
+				BD0BB1551A41166C00E5A3EF /* REValidation.m */,
+				BD0BB1561A41166C00E5A3EF /* REValidator.h */,
+				BD0BB1571A41166C00E5A3EF /* REValidator.m */,
+				BD0BB1581A41166C00E5A3EF /* Validators */,
+			);
+			path = REValidation;
+			sourceTree = "<group>";
+		};
+		BD0BB1581A41166C00E5A3EF /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BB1591A41166C00E5A3EF /* REEmailValidator.h */,
+				BD0BB15A1A41166C00E5A3EF /* REEmailValidator.m */,
+				BD0BB15B1A41166C00E5A3EF /* RELengthValidator.h */,
+				BD0BB15C1A41166C00E5A3EF /* RELengthValidator.m */,
+				BD0BB15D1A41166C00E5A3EF /* REPresenceValidator.h */,
+				BD0BB15E1A41166C00E5A3EF /* REPresenceValidator.m */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		BD340D4C1A3EA0B10094D454 /* InAppSettingsKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,6 +946,15 @@
 			children = (
 				BD340D8D1A3EA1A30094D454 /* AppSettingsViewController.h */,
 				BD340D8E1A3EA1A30094D454 /* AppSettingsViewController.m */,
+				BD0BB1691A412FE100E5A3EF /* ModifyPasswordViewController.h */,
+				BD0BB16A1A412FE100E5A3EF /* ModifyPasswordViewController.m */,
+				BD0BB16C1A4158A100E5A3EF /* ProfileViewController.h */,
+				BD0BB16D1A4158A100E5A3EF /* ProfileViewController.m */,
+				BD9391541A417C4900641343 /* ScoreViewController.h */,
+				BD9391551A417C4900641343 /* ScoreViewController.m */,
+				BD9391571A41BA2D00641343 /* ScoreRulesViewController.h */,
+				BD9391581A41BA2D00641343 /* ScoreRulesViewController.m */,
+				BD9391591A41BA2D00641343 /* ScoreRulesViewController.xib */,
 			);
 			name = AppSettingsModule;
 			sourceTree = "<group>";
@@ -955,10 +1202,12 @@
 				BD340D881A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.xib in Resources */,
 				BD47DCAB1A39C50C0022776E /* recipe_tab_2_active@2x.png in Resources */,
 				BD47DCA51A39C50C0022776E /* recipe_tab_1@2x.png in Resources */,
+				BD0BB1491A4113AC00E5A3EF /* RETableViewManager.bundle in Resources */,
 				BD47DCAC1A39C50C0022776E /* recipe_tab_3.png in Resources */,
 				BD340D861A3EA0B10094D454 /* IASKAppSettingsWebView.xib in Resources */,
 				BD47DCAA1A39C50C0022776E /* recipe_tab_2_active.png in Resources */,
 				BD47DC9F1A39C50C0022776E /* Icon@2x.png in Resources */,
+				BD93915B1A41BA2D00641343 /* ScoreRulesViewController.xib in Resources */,
 				BD47DCA91A39C50C0022776E /* recipe_tab_2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1001,12 +1250,16 @@
 				BD47DCCA1A39C7840022776E /* AFHTTPRequestOperation.m in Sources */,
 				04B53C9419B9E49000A4CBD5 /* ASINetworkQueue.m in Sources */,
 				04B53C6719B9E28900A4CBD5 /* UIButton+WebCache.m in Sources */,
+				BD0BB1601A41166C00E5A3EF /* NSError+REValidation.m in Sources */,
 				04B53C6419B9E28900A4CBD5 /* SDWebImageDownloaderOperation.m in Sources */,
+				BD0BB1441A4113AC00E5A3EF /* REActionBar.m in Sources */,
+				BD0BB13E1A4113AC00E5A3EF /* REFloatItem.m in Sources */,
 				BD47DCCE1A39C7840022776E /* AFSecurityPolicy.m in Sources */,
 				04B53CA619B9E6CB00A4CBD5 /* SBJSON.m in Sources */,
 				04B53C6019B9E28900A4CBD5 /* SDImageCache.m in Sources */,
 				BD47DCE51A39D0EC0022776E /* MyLauncherView.m in Sources */,
 				04B53C5F19B9E28900A4CBD5 /* NSData+ImageContentType.m in Sources */,
+				BD0BB1361A4113AB00E5A3EF /* RETableViewFloatCell.m in Sources */,
 				04B53CAC19B9E85500A4CBD5 /* SYMovieModel.m in Sources */,
 				04B53C6219B9E28900A4CBD5 /* SDWebImageDecoder.m in Sources */,
 				BD340D791A3EA0B10094D454 /* IASKSettingsReader.m in Sources */,
@@ -1014,12 +1267,16 @@
 				BD63C9911A3EC5D00084666F /* CouponDetailViewController.m in Sources */,
 				BD4BB96F1A3FFD940080E5DA /* MJRefreshBaseView.m in Sources */,
 				04B53C6B19B9E28900A4CBD5 /* UIImageView+HighlightedWebCache.m in Sources */,
+				BD0BB13B1A4113AB00E5A3EF /* REBoolItem.m in Sources */,
 				BD340D821A3EA0B10094D454 /* IASKSlider.m in Sources */,
 				04B53CA519B9E6CB00A4CBD5 /* NSString+SBJSON.m in Sources */,
+				BD0BB1631A41166C00E5A3EF /* REEmailValidator.m in Sources */,
+				BD0BB16E1A4158A100E5A3EF /* ProfileViewController.m in Sources */,
 				BD47DCE31A39D0EC0022776E /* MyLauncherPageControl.m in Sources */,
 				04B53C9519B9E49000A4CBD5 /* Reachability.m in Sources */,
 				BD340D7B1A3EA0B10094D454 /* IASKSettingsStoreFile.m in Sources */,
 				04B53C8E19B9E49000A4CBD5 /* ASIDataCompressor.m in Sources */,
+				BD0BB13A1A4113AB00E5A3EF /* RETableViewTextCell.m in Sources */,
 				BD340D7C1A3EA0B10094D454 /* IASKSettingsStoreUserDefaults.m in Sources */,
 				BD4BB9721A3FFD940080E5DA /* MJRefreshHeaderView.m in Sources */,
 				BD4BB9701A3FFD940080E5DA /* MJRefreshConst.m in Sources */,
@@ -1028,21 +1285,35 @@
 				04B53C6319B9E28900A4CBD5 /* SDWebImageDownloader.m in Sources */,
 				BD47DCD11A39C7840022776E /* AFURLResponseSerialization.m in Sources */,
 				04B53CA819B9E6CB00A4CBD5 /* SBJsonParser.m in Sources */,
+				BD0BB13F1A4113AC00E5A3EF /* RELongTextItem.m in Sources */,
 				04B53C6119B9E28900A4CBD5 /* SDWebImageCompat.m in Sources */,
 				BD63C9A41A3F25880084666F /* MainUserView.m in Sources */,
 				BD47DCEC1A39D4590022776E /* CouponViewController.m in Sources */,
+				BD0BB1611A41166C00E5A3EF /* REValidation.m in Sources */,
 				04B53CA419B9E6CB00A4CBD5 /* NSObject+SBJSON.m in Sources */,
+				BD0BB1481A4113AC00E5A3EF /* RETableViewItem.m in Sources */,
+				BD0BB1471A4113AC00E5A3EF /* RETableViewCellStyle.m in Sources */,
+				BD0BB1331A4113AB00E5A3EF /* RETableViewBoolCell.m in Sources */,
+				BD0BB1461A4113AC00E5A3EF /* RETableViewCell.m in Sources */,
 				04B53CA719B9E6CB00A4CBD5 /* SBJsonBase.m in Sources */,
 				BD47DCE61A39D0EC0022776E /* MyLauncherViewController.m in Sources */,
 				BD340D7E1A3EA0B10094D454 /* IASKPSSliderSpecifierViewCell.m in Sources */,
+				BD0BB1621A41166C00E5A3EF /* REValidator.m in Sources */,
 				048A005E19B9BCB70014A832 /* main.m in Sources */,
+				BD9391561A417C4900641343 /* ScoreViewController.m in Sources */,
 				04B53C6819B9E28900A4CBD5 /* UIImage+GIF.m in Sources */,
 				BD47DCFE1A39E1D30022776E /* LeaderboardModel.m in Sources */,
+				BD0BB1681A411AD600E5A3EF /* RELabelItem.m in Sources */,
 				BD340D7D1A3EA0B10094D454 /* IASKSpecifier.m in Sources */,
 				BD47DD061A39F6110022776E /* MainProfileView.m in Sources */,
 				BD47DCF31A39DD340022776E /* LeaderboardViewController.m in Sources */,
 				BD340D781A3EA0B10094D454 /* IASKSpecifierValuesViewController.m in Sources */,
+				BD0BB16B1A412FE100E5A3EF /* ModifyPasswordViewController.m in Sources */,
 				04B53C9319B9E49000A4CBD5 /* ASIInputStream.m in Sources */,
+				BD0BB1391A4113AB00E5A3EF /* RETableViewOptionCell.m in Sources */,
+				BD0BB1371A4113AB00E5A3EF /* RETableViewLongTextCell.m in Sources */,
+				BD0BB14B1A4113AC00E5A3EF /* RETableViewOptionsController.m in Sources */,
+				BD0BB13C1A4113AB00E5A3EF /* RECreditCardItem.m in Sources */,
 				04B53CB019B9E9DA00A4CBD5 /* SYCell.m in Sources */,
 				BD47DCCD1A39C7840022776E /* AFNetworkReachabilityManager.m in Sources */,
 				BD340D811A3EA0B10094D454 /* IASKPSToggleSwitchSpecifierViewCell.m in Sources */,
@@ -1050,32 +1321,47 @@
 				04B53C6619B9E28900A4CBD5 /* SDWebImagePrefetcher.m in Sources */,
 				04B53C5E19B9E28900A4CBD5 /* MKAnnotationView+WebCache.m in Sources */,
 				04B53C9219B9E49000A4CBD5 /* ASIHTTPRequest.m in Sources */,
+				BD0BB1351A4113AB00E5A3EF /* RETableViewDateTimeCell.m in Sources */,
+				BD0BB1651A41166C00E5A3EF /* REPresenceValidator.m in Sources */,
 				BD340D841A3EA0B10094D454 /* IASKTextField.m in Sources */,
 				04B53C9019B9E49000A4CBD5 /* ASIDownloadCache.m in Sources */,
 				04B53C6C19B9E28900A4CBD5 /* UIImageView+WebCache.m in Sources */,
 				BD47DCE41A39D0EC0022776E /* MyLauncherScrollView.m in Sources */,
+				BD0BB1341A4113AB00E5A3EF /* RETableViewCreditCardCell.m in Sources */,
 				04B53C9119B9E49000A4CBD5 /* ASIFormDataRequest.m in Sources */,
 				BD47DCCC1A39C7840022776E /* AFHTTPSessionManager.m in Sources */,
 				BD340D801A3EA0B10094D454 /* IASKPSTitleValueSpecifierViewCell.m in Sources */,
+				BD0BB1641A41166C00E5A3EF /* RELengthValidator.m in Sources */,
+				BD0BB1431A4113AC00E5A3EF /* RETextItem.m in Sources */,
 				BD340D761A3EA0B10094D454 /* IASKAppSettingsViewController.m in Sources */,
 				BD47DCE11A39D0EC0022776E /* CustomBadge.m in Sources */,
 				BD47DC821A39C4A80022776E /* RootViewController.m in Sources */,
+				BD0BB1381A4113AB00E5A3EF /* RETableViewNumberCell.m in Sources */,
 				BD340D7A1A3EA0B10094D454 /* IASKSettingsStore.m in Sources */,
+				BD0BB15F1A41166C00E5A3EF /* REFormattedNumberField.m in Sources */,
 				BD340D771A3EA0B10094D454 /* IASKAppSettingsWebViewController.m in Sources */,
+				BD0BB13D1A4113AB00E5A3EF /* REDateTimeItem.m in Sources */,
 				BD4BB9751A3FFD940080E5DA /* UIView+MJExtension.m in Sources */,
+				BD93915A1A41BA2D00641343 /* ScoreRulesViewController.m in Sources */,
 				BD47DCD21A39C7840022776E /* AFURLSessionManager.m in Sources */,
 				BD47DCCF1A39C7840022776E /* AFURLConnectionOperation.m in Sources */,
+				BD0BB1401A4113AC00E5A3EF /* REMultipleChoiceItem.m in Sources */,
 				04B53C8D19B9E49000A4CBD5 /* ASIAuthenticationDialog.m in Sources */,
 				BD4BB9711A3FFD940080E5DA /* MJRefreshFooterView.m in Sources */,
 				BD4BB9741A3FFD940080E5DA /* UIScrollView+MJRefresh.m in Sources */,
+				BD0BB1451A4113AC00E5A3EF /* REPlaceholderTextView.m in Sources */,
 				BD47DD021A39E3D20022776E /* LeaderboardCellTableViewCell.m in Sources */,
 				BD47DCCB1A39C7840022776E /* AFHTTPRequestOperationManager.m in Sources */,
+				BD0BB14A1A4113AC00E5A3EF /* RETableViewManager.m in Sources */,
+				BD0BB14C1A4113AC00E5A3EF /* RETableViewSection.m in Sources */,
 				04B53C8F19B9E49000A4CBD5 /* ASIDataDecompressor.m in Sources */,
 				BD340D8F1A3EA1A30094D454 /* AppSettingsViewController.m in Sources */,
+				BD0BB1411A4113AC00E5A3EF /* RENumberItem.m in Sources */,
 				04B53C6D19B9E28900A4CBD5 /* UIView+WebCacheOperation.m in Sources */,
 				BD340D7F1A3EA0B10094D454 /* IASKPSTextFieldSpecifierViewCell.m in Sources */,
 				BD47DCE21A39D0EC0022776E /* MyLauncherItem.m in Sources */,
 				04B53C6519B9E28900A4CBD5 /* SDWebImageManager.m in Sources */,
+				BD0BB1421A4113AC00E5A3EF /* RERadioItem.m in Sources */,
 				04B53CA919B9E6CB00A4CBD5 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

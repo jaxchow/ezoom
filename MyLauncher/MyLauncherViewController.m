@@ -42,9 +42,7 @@
 
 -(id)init {
     //[self.navigationController setNavigationBarHidden:TRUE];
-	if((self = [super init])) { 
-		self.title = @"myLauncher";
-	}
+    self.navigationController.navigationBar.translucent=NO;
 	return self;
 }
 
