@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "IASKAppSettingsViewController.h"
 #import "RETableViewManager.h"
 
 @interface AppSettingsViewController : UITableViewController <RETableViewManagerDelegate>{

@@ -48,9 +48,9 @@
 
 -(void)loadView {
 	[super loadView];
-	
+    [self.navigationController setNavigationBarHidden:TRUE];
 	[self setLauncherView:[[MyLauncherView alloc] initWithFrame:self.view.bounds]];
-	[self.launcherView setBackgroundColor:COLOR(234,237,250)];
+	[self.launcherView setBackgroundColor:COLOR(255,255,255)];
 	[self.launcherView setDelegate:self];
 	self.view = self.launcherView;
 	

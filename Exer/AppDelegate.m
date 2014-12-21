@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AppPassportViewController.h"
 
 @implementation AppDelegate
 
@@ -19,13 +20,12 @@
     {
         return;
     }
-    window.backgroundColor = [UIColor blackColor];
-    
+    [window addSubview:[[AppPassportViewController alloc] init].view];
     navigationController = [[UINavigationController alloc] initWithRootViewController:
                             [[RootViewController alloc] init]];
     navigationController.navigationBar.tintColor = COLOR(2, 100, 162);
     
-    [window addSubview:navigationController.view];
+ //   [window addSubview:navigationController.view];
     [window makeKeyAndVisible];
     [window layoutSubviews];
 }

@@ -55,7 +55,7 @@
 
 - (RETableViewSection *)addAccountSection
 {
-  //  __typeof (&*self) __weak weakSelf = self;
+    __typeof (&*self) __weak weakSelf = self;
     
     RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:@"帐户信息"];
     

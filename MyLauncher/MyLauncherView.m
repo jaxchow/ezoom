@@ -108,14 +108,14 @@ static const CGFloat iPadLandscapeYPadding = 30;
 		dragging = NO;
 		editing = NO;
 		itemsAdded = NO;
-        editingAllowed = YES;
+        editingAllowed = NO;
         numberOfImmovableItems = -1;
-        [self addSubview:[[MainProfileView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)]];
+        [self addSubview:[[MainProfileView alloc] initWithFrame:CGRectMake(0, 0, 320, 250)]];
 		[self setupCurrentViewLayoutSettings];
 		
 		[self setPagesScrollView:[[MyLauncherScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height - pControllHeight)]];
 		self.pagesScrollView.delegate = self;
-		self.pagesScrollView.pagingEnabled = YES;
+		self.pagesScrollView.pagingEnabled = NO;
 		self.pagesScrollView.showsHorizontalScrollIndicator = NO;
 		self.pagesScrollView.showsVerticalScrollIndicator = NO;
 		self.pagesScrollView.alwaysBounceHorizontal = YES;
@@ -212,7 +212,7 @@ static const CGFloat iPadLandscapeYPadding = 30;
 
 - (void)updateFrames
 {
-    self.pagesScrollView.frame = CGRectMake(0, 200, self.frame.size.width, self.frame.size.height - pControllHeight);
+    self.pagesScrollView.frame = CGRectMake(0, 250, self.frame.size.width, self.frame.size.height - pControllHeight);
 	self.pageControl.frame = CGRectMake(0, self.frame.size.height - pControllHeight, self.frame.size.width, pControllHeight);
 	[self.pageControl setNeedsDisplay];
 }
