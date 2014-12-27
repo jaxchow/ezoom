@@ -35,6 +35,7 @@
 #import "RETableViewDateTimeCell.h"
 #import "RETableViewLongTextCell.h"
 #import "RETableViewOptionCell.h"
+#import "RETableViewSegmentedCell.h"
 #import "REBoolItem.h"
 #import "RERadioItem.h"
 #import "RETextItem.h"
@@ -43,6 +44,7 @@
 #import "RECreditCardItem.h"
 #import "REFloatItem.h"
 #import "REDateTimeItem.h"
+#import "RESegmentedItem.h"
 #import "REMultipleChoiceItem.h"
 #import "REValidation.h"
 

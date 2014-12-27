@@ -15,6 +15,7 @@
 #import "LeaderboardModel.h"
 #import "LeaderboardCellTableViewCell.h"
 #import "MJRefresh.h"
+#import "ProgressHUD.h"
 
 @interface LeaderboardViewController ()<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate>{
     UITableView *_tableView;
@@ -40,6 +41,9 @@
 
 - (void)viewDidLoad {
     // Do any additional setup after loading the view.
+   // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] style:UIBarButtonSystemItemCompose target:self action:@selector(rules:)];
+    UIButton* rightButton = (UIButton*)self.navigationItem.rightBarButtonItem.customView;
+    [rightButton addTarget:self action:@selector(storeAction:) forControlEvents:UIControlEventTouchUpInside];
     _saveDataArray = [NSMutableArray array];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 20) style:UITableViewStylePlain];
@@ -53,16 +57,15 @@
     
     //注册
     [_tableView registerNib:[UINib nibWithNibName:@"LeaderboardCellTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
-    
     //请求类
-    httpRequest = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:movieURL]];
+    httpRequest = [ASIHTTPRequest requestWithURL:DOMAIN_URL(@"/cms/mobile/band.jspx")];
     
     //
     httpRequest.delegate = self;
     //异步发送请求
     [httpRequest startSynchronous];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    
+    [ProgressHUD show:@"加载中..."];
     // 2.集成刷新控件
     [self setupRefresh];
     
@@ -72,7 +75,6 @@
 {
     // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
     [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
-#warning 自动刷新(一进入程序就下拉刷新)
     [_tableView headerBeginRefreshing];
     
     // 2.上拉加载更多(进入刷新状态就会调用self的footerRereshing)
@@ -81,7 +83,7 @@
     // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
     _tableView.headerPullToRefreshText = @"下拉可以刷新了";
     _tableView.headerReleaseToRefreshText = @"松开马上刷新了";
-    _tableView.headerRefreshingText = @"MJ哥正在帮你刷新中,不客气";
+    _tableView.headerRefreshingText = @"刷新中...";
     
 //    self.tableView.footerPullToRefreshText = @"上拉可以加载更多数据了";
 //    self.tableView.footerReleaseToRefreshText = @"松开马上加载更多数据了";
@@ -108,7 +110,7 @@
             model.userName = dict[@"title"];
             model.userGroup = dict[@"year"];
             model.userAvatar = dict[@"images"][@"large"];
-            
+            model.weekScore=dict[@"year"];
             [_saveDataArray addObject:model];
         }
 //         [_saveDataArray insertObject:movieArray atIndex:0];
@@ -142,7 +144,8 @@
         
         cell.userName.text = model.userName;
         cell.userGroup.text = model.userGroup;
-        cell.weekScore.text =[NSString stringWithFormat: @"%d名", indexPath.row+1];
+        cell.boardIndex.text =[NSString stringWithFormat: @"%d名", indexPath.row+1];
+        cell.weekScore.text =model.weekScore;
         [cell.userAvatar sd_setImageWithURL:[NSURL URLWithString:model.userAvatar] placeholderImage:[UIImage imageNamed:@"photo"]];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
@@ -169,11 +172,13 @@
         [_saveDataArray addObject:model];
     }
      [_tableView reloadData];
+    [ProgressHUD dismiss];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
     NSLog(@"请求失败");
+    [ProgressHUD dismiss];
 }
 
 -(void)openView

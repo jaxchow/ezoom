@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SessionId</key>
+	<string>sdfadsg29342ksldfjs</string>
+	<key>User</key>
+	<dict>
+		<key>realname</key>
+		<string>一人玩</string>
+		<key>userscore</key>
+		<integer>0</integer>
+		<key>hobby</key>
+		<string>无</string>
+		<key>city</key>
+		<string>杭州</string>
+		<key>carType</key>
+		<string>telas</string>
+		<key>carnumber</key>
+		<string>浙A 12345</string>
+		<key>mobile</key>
+		<string>13958001441</string>
+		<key>usergrouptext</key>
+		<string>车逸族成员</string>
+		<key>usergroup</key>
+		<integer>2</integer>
+		<key>sex</key>
+		<integer>0</integer>
+		<key>nickname</key>
+		<string>jax</string>
+		<key>userid</key>
+		<integer>13</integer>
+		<key>username</key>
+		<string>jaxchow</string>
+		<key>birthday</key>
+		<date>1985-01-01T02:40:44Z</date>
+		<key>intro</key>
+		<string>怎么想都不明白</string>
+	</dict>
+</dict>
+</plist>

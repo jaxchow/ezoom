@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 Sauchye. All rights reserved.
 //
 
-#import "SYMovieModel.h"
+#import "ActivityModel.h"
 
-@implementation SYMovieModel
+@implementation ActivityModel
 
 @end

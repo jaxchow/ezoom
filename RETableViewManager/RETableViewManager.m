@@ -112,6 +112,7 @@ BOOL REDeviceIsUIKit7() {
     self[@"REFloatItem"] = @"RETableViewFloatCell";
     self[@"REDateTimeItem"] = @"RETableViewDateTimeCell";
     self[@"RECreditCardItem"] = @"RETableViewCreditCardCell";
+    self[@"RESegmentedItem"] = @"RETableViewSegmentedCell";
     self[@"REMultipleChoiceItem"] = @"RETableViewOptionCell";
 }
 

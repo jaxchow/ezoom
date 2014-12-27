@@ -14,5 +14,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *userName;
 @property (weak, nonatomic) IBOutlet UILabel *userGroup;
 @property (weak, nonatomic) IBOutlet UILabel *weekScore;
-
+@property (weak, nonatomic) IBOutlet UILabel *boardIndex;
 @end

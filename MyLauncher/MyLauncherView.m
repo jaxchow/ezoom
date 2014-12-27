@@ -19,7 +19,7 @@
 //
 
 #import "MyLauncherView.h"
-#import "MainProfileView.h"
+#import "LanuncherUserViewController.h"
 
 struct NItemLocation {
 	NSInteger page; 
@@ -110,7 +110,7 @@ static const CGFloat iPadLandscapeYPadding = 30;
 		itemsAdded = NO;
         editingAllowed = NO;
         numberOfImmovableItems = -1;
-        [self addSubview:[[MainProfileView alloc] initWithFrame:CGRectMake(0, 0, 320, 250)]];
+        [self addSubview:[[LanuncherUserViewController alloc] init].view];
 		[self setupCurrentViewLayoutSettings];
 		
 		[self setPagesScrollView:[[MyLauncherScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height - pControllHeight)]];

@@ -5,14 +5,14 @@
 //  Created by zhouhuan on 12/9/14.
 //  Copyright (c) 2014 jaxteam. All rights reserved.
 //
-#define movieURL  @"http://api.douban.com/v2/movie/top250"
 #import "CouponViewController.h"
 #import "ASIHTTPRequest.h"
 #import "NSString+SBJSON.h"
 #import "UIImageView+WebCache.h"
-#import "SYMovieModel.h"
-#import "SYCell.h"
+#import "ActivityModel.h"
+#import "ActivityItemCell.h"
 #import "CouponDetailViewController.h"
+#import "ProgressHUD.h"
 
 
 @interface CouponViewController ()<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate>
@@ -61,15 +61,16 @@
     [self.view addSubview:_tableView];
     
     //注册
-    [_tableView registerNib:[UINib nibWithNibName:@"SYCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
+    [_tableView registerNib:[UINib nibWithNibName:@"ActivityItemCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
     
     //请求类
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:movieURL]];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:DOMAIN_CONTEXT(@"/cms/mobile/coupom/list.jspx")];
     
     //
     request.delegate = self;
     //异步发送请求
     [request startAsynchronous];
+    [ProgressHUD show:@"加载中...."];
     
 }
 
@@ -78,24 +79,37 @@
 {
     NSDictionary *jsonDict = [request.responseString  JSONValue];
     
-    NSArray *movieArray = jsonDict[@"subjects"];
+    NSArray *movieArray = jsonDict[@"coupoms"];
     
     for (NSDictionary *dict  in movieArray)
     {
-        SYMovieModel *model = [[SYMovieModel alloc] init];
-        model.movieName = dict[@"title"];
-        model.movieYear = dict[@"year"];
-        model.movieImage = dict[@"images"][@"large"];
+        ActivityModel *model = [[ActivityModel alloc] init];
+        model.key=dict[@"id"];
+        model.title= dict[@"title"];
+        model.activityImg = dict[@"activityImg"];
+        model.payType = dict[@"payType"];
+        model.payText = dict[@"payText"];
+        model.address = dict[@"address"];
+        model.content = dict[@"content"];
+        model.activityType = dict[@"activityType"];
+        model.typeText= dict[@"typeText"];
+        model.sourceType = dict[@"sourceType"];
+        model.contentType = dict[@"contentType"];
+        model.cost = dict[@"cost"];
+        model.limitCount = dict[@"limitCount"];
+        model.participate = dict[@"participate"];
         
         [_saveDataArray addObject:model];
     }
     //刷新表
+    [ProgressHUD dismiss];
     [_tableView reloadData];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
     NSLog(@"请求失败");
+    [ProgressHUD dismiss];
 }
 
 #pragma mark - UITableViewDataSource
@@ -106,20 +120,22 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SYCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    SYMovieModel *model = _saveDataArray[indexPath.row];
-    
-    cell.name.text = model.movieName;
-    cell.year.text = model.movieYear;
-    [cell.movieImageView sd_setImageWithURL:[NSURL URLWithString:model.movieImage] placeholderImage:[UIImage imageNamed:@"photo"]];
+    ActivityItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    ActivityModel *model = _saveDataArray[indexPath.row];
+    cell.title.text = model.title;
+    cell.payText.text = model.payText;
+  //  cell.cost.text = model.cost;
+    [cell.activityImg sd_setImageWithURL:DOMAIN_URL(model.activityImg) placeholderImage:[UIImage imageNamed:@"photo"]];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    ActivityModel *model = _saveDataArray[indexPath.row];
+    [self.navigationController pushViewController:[[CouponDetailViewController alloc] initWithModel:model] animated:TRUE];
     
-    [self.navigationController pushViewController:[[CouponDetailViewController alloc] initWithKey:@"11"] animated:TRUE];
 }
 
 

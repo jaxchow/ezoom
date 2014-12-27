@@ -9,6 +9,8 @@
 #import "MainProfileView.h"
 #import "PAImageView.h"
 #import "AFNetworking.h"
+#import "RKTabView.h"
+#import "RKTabItem.h"
 
 @implementation MainProfileView
 
@@ -18,6 +20,9 @@
     if (self) {
         // Initialization code
     }
+    RKTabView *titledTabsView = [[RKTabView alloc] initWithFrame:CGRectMake(0, 150, 320, 60)];
+    
+    [self addSubview:titledTabsView];
     self.backgroundColor=[UIColor colorWithRed:182/255.0f green:182/255.0f blue:187/255.0f alpha:1.0f];
     PAImageView *avaterImageView=[[PAImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     [avaterImageView.layer setPosition:CGPointMake(CGRectGetMidX(self.bounds), 80)];

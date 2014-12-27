@@ -20,7 +20,6 @@
 @implementation AppPassportViewController
 
 - (void)viewDidLoad {
-    //[self. initWithTitle:@"积分规则" style:UIBarButtonItemStyleBordered target:self action:@selector(showScoreRules:)];
     [self.submitButton addTarget:self action:@selector(submitLogin:) forControlEvents:UIControlEventTouchDown];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -33,6 +32,7 @@
 
 -(IBAction)submitLogin:(id)sender{
     ASIFormDataRequest *httpRequest=[ASIFormDataRequest requestWithURL:[NSURL URLWithString:movieURL]];
+    [self.parentViewController dismissModalViewControllerAnimated:TRUE ];
    // [httpRequest a]
 //    [httpRequest setRequestMethod:@"POST"];
 //    [httpRequest setPostValue:self.userField.text forKey:@"username"];

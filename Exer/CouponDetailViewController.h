@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ActivityModel.h"
 
 @interface CouponDetailViewController : UIViewController
 
-- (id)initWithKey:(NSString*)key;
+- (id)initWithModel:(ActivityModel*)model;
 @end
+

@@ -11,6 +11,7 @@
 #import "ModifyPasswordViewController.h"
 #import "ProfileViewController.h"
 #import "ScoreViewController.h"
+#import "AppPassportViewController.h"
 
 @interface AppSettingsViewController ()
 
@@ -29,14 +30,21 @@
 
 @implementation AppSettingsViewController
 
+    NSMutableDictionary *settingData;
 
 -(void)openView
 {
     UIViewController *targetViewController = [[AppSettingsViewController alloc] init];
     [self.navigationController pushViewController:targetViewController animated:YES];
 }
+- (void) readPlistSettings{
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"AppSettings" ofType:@"plist"];
+    settingData = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+   // NSLog(@"%@", settingData);
 
+}
 - (void)viewDidLoad {
+    [self readPlistSettings];
  //   self.navigationController.navigationBarHidden=TRUE;
     self.navigationController.navigationBar.tintColor = COLOR(2, 100, 162);
     _manager = [[RETableViewManager alloc] initWithTableView:self.tableView delegate:self];
@@ -63,21 +71,22 @@
             [item deselectRowAnimated:YES];
             [self.navigationController pushViewController:[[ProfileViewController alloc] init] animated:YES];
         }];
-        username.detailLabelText=@"Jaxchow";
+    
+        username.detailLabelText=settingData[@"User"][@"username"];
   
         [section addItem:username];
     // Add items to this section
     RETableViewItem *usergroup = [RETableViewItem itemWithTitle:@"会员等级" style:UITableViewCellStyleValue1 accessoryType:UITableViewCellAccessoryNone  selectionHandler:^(RETableViewItem *item) {
         [item deselectRowAnimated:YES];
     }];
-    usergroup.detailLabelText=@"车逸族成员";
+    usergroup.detailLabelText=settingData[@"User"][@"usergrouptext"];
     [section addItem:usergroup];
    
     RETableViewItem *userpoint = [RETableViewItem itemWithTitle:@"帐户积分" style:UITableViewCellStyleValue1 accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
         [item deselectRowAnimated:YES];
         [self.navigationController pushViewController:[[ScoreViewController alloc] init] animated:YES];
     }];
-    userpoint.detailLabelText=@"1234";
+    userpoint.detailLabelText=[NSString stringWithFormat: @"%@", settingData[@"User"][@"userscore"]];
     [section addItem:userpoint];
     
     
@@ -86,67 +95,6 @@
         [self.navigationController pushViewController:[[ModifyPasswordViewController alloc] init] animated:YES];
     }];
     [section addItem:userpass];
-
-    
-//    self.textItem = [RETextItem itemWithTitle:@"Text item" value:nil placeholder:@"Text"];
-//    self.numberItem = [RENumberItem itemWithTitle:@"Phone" value:@"" placeholder:@"(123) 456-7890" format:@"(XXX) XXX-XXXX"];
-//    self.passwordItem = [RETextItem itemWithTitle:@"Password" value:nil placeholder:@"Password item"];
-//    self.passwordItem.secureTextEntry = YES;
-//    self.boolItem = [REBoolItem itemWithTitle:@"Bool item" value:YES switchValueChangeHandler:^(REBoolItem *item) {
-//        NSLog(@"Value: %@", item.value ? @"YES" : @"NO");
-//    }];
-//    self.floatItem = [REFloatItem itemWithTitle:@"Float item" value:0.3 sliderValueChangeHandler:^(REFloatItem *item) {
-//        NSLog(@"Value: %f", item.value);
-//    }];
-//    self.dateTimeItem = [REDateTimeItem itemWithTitle:@"Date / Time" value:[NSDate date] placeholder:nil format:@"MM/dd/yyyy hh:mm a" datePickerMode:UIDatePickerModeDateAndTime];
-    /*
-    self.radioItem = [RERadioItem itemWithTitle:@"Radio" value:@"Option 4" selectionHandler:^(RERadioItem *item) {
-        [item deselectRowAnimated:YES]; // same as [weakSelf.tableView deselectRowAtIndexPath:item.indexPath animated:YES];
-        
-        // Generate sample options
-        //
-        NSMutableArray *options = [[NSMutableArray alloc] init];
-        for (NSInteger i = 1; i < 40; i++)
-            [options addObject:[NSString stringWithFormat:@"Option %i", i]];
-        
-        // Present options controller
-        //
-        RETableViewOptionsController *optionsController = [[RETableViewOptionsController alloc] initWithItem:item options:options multipleChoice:NO completionHandler:^{
-            [weakSelf.navigationController popViewControllerAnimated:YES];
-            
-            [item reloadRowWithAnimation:UITableViewRowAnimationNone]; // same as [weakSelf.tableView reloadRowsAtIndexPaths:@[item.indexPath] withRowAnimation:UITableViewRowAnimationNone];
-        }];
-        
-        // Adjust styles
-        //
-        optionsController.delegate = weakSelf;
-        optionsController.style = section.style;
-        if (weakSelf.tableView.backgroundView == nil) {
-            optionsController.tableView.backgroundColor = weakSelf.tableView.backgroundColor;
-            optionsController.tableView.backgroundView = nil;
-        }
-        
-        // Push the options controller
-        //
-        [weakSelf.navigationController pushViewController:optionsController animated:YES];
-    }];
-    */
-   
-//    self.longTextItem = [RELongTextItem itemWithValue:nil placeholder:@"Multiline text field"];
-//    self.longTextItem.cellHeight = 88;
-    
-//    [section addItem:self.fullLengthFieldItem];
-//    [section addItem:self.textItem];
-//    [section addItem:self.numberItem];
-//    [section addItem:self.passwordItem];
-//    [section addItem:self.boolItem];
-//    [section addItem:self.floatItem];
-//    [section addItem:self.dateTimeItem];
-//    [section addItem:self.radioItem];
-//    [section addItem:self.multipleChoiceItem];
-//    [section addItem:self.longTextItem];
-    
-
     
     return section;
 }
@@ -155,20 +103,20 @@
 {
     __typeof (&*self) __weak weakSelf = self;
     RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:@"个人信息"];
-        RERadioItem *cityItem= [RERadioItem itemWithTitle:@"所在城市" value:@"杭州" selectionHandler:^(RERadioItem *item) {
+        RERadioItem *cityItem= [RERadioItem itemWithTitle:@"所在城市" value:settingData[@"User"][@"city"] selectionHandler:^(RERadioItem *item) {
         [item deselectRowAnimated:YES];
         
         NSMutableArray *options = [[NSMutableArray alloc] init];
-            [options addObject:[NSString stringWithFormat:@"杭州", 1]];
-            [options addObject:[NSString stringWithFormat:@"温州", 2]];
-            [options addObject:[NSString stringWithFormat:@"宁波", 3]];
-            [options addObject:[NSString stringWithFormat:@"嘉兴", 4]];
-            [options addObject:[NSString stringWithFormat:@"绍兴", 5]];
-            [options addObject:[NSString stringWithFormat:@"湖州", 6]];
-            [options addObject:[NSString stringWithFormat:@"台州", 7]];
-            [options addObject:[NSString stringWithFormat:@"金华", 8]];
-            [options addObject:[NSString stringWithFormat:@"衢州", 9]];
-            [options addObject:[NSString stringWithFormat:@"舟山", 10]];
+            [options addObject:[NSString stringWithFormat:@"杭州"]];
+            [options addObject:[NSString stringWithFormat:@"温州"]];
+            [options addObject:[NSString stringWithFormat:@"宁波"]];
+            [options addObject:[NSString stringWithFormat:@"嘉兴"]];
+            [options addObject:[NSString stringWithFormat:@"绍兴"]];
+            [options addObject:[NSString stringWithFormat:@"湖州"]];
+            [options addObject:[NSString stringWithFormat:@"台州"]];
+            [options addObject:[NSString stringWithFormat:@"金华"]];
+            [options addObject:[NSString stringWithFormat:@"衢州"]];
+            [options addObject:[NSString stringWithFormat:@"舟山"]];
         
         RETableViewOptionsController *optionsController = [[RETableViewOptionsController alloc] initWithItem:item options:options multipleChoice:NO completionHandler:^{
             [weakSelf.navigationController popViewControllerAnimated:YES];
@@ -194,16 +142,16 @@
         [item deselectRowAnimated:YES];
         
         NSMutableArray *options = [[NSMutableArray alloc] init];
-        [options addObject:[NSString stringWithFormat:@"杭州", 1]];
-        [options addObject:[NSString stringWithFormat:@"温州", 2]];
-        [options addObject:[NSString stringWithFormat:@"宁波", 3]];
-        [options addObject:[NSString stringWithFormat:@"嘉兴", 4]];
-        [options addObject:[NSString stringWithFormat:@"绍兴", 5]];
-        [options addObject:[NSString stringWithFormat:@"湖州", 6]];
-        [options addObject:[NSString stringWithFormat:@"台州", 7]];
-        [options addObject:[NSString stringWithFormat:@"金华", 8]];
-        [options addObject:[NSString stringWithFormat:@"衢州", 9]];
-        [options addObject:[NSString stringWithFormat:@"舟山", 10]];
+        [options addObject:[NSString stringWithFormat:@"杭州"]];
+        [options addObject:[NSString stringWithFormat:@"温州"]];
+        [options addObject:[NSString stringWithFormat:@"宁波"]];
+        [options addObject:[NSString stringWithFormat:@"嘉兴"]];
+        [options addObject:[NSString stringWithFormat:@"绍兴"]];
+        [options addObject:[NSString stringWithFormat:@"湖州"]];
+        [options addObject:[NSString stringWithFormat:@"台州"]];
+        [options addObject:[NSString stringWithFormat:@"金华"]];
+        [options addObject:[NSString stringWithFormat:@"衢州"]];
+        [options addObject:[NSString stringWithFormat:@"舟山"]];
         
         RETableViewOptionsController *optionsController = [[RETableViewOptionsController alloc] initWithItem:item options:options multipleChoice:NO completionHandler:^{
             [weakSelf.navigationController popViewControllerAnimated:YES];
@@ -253,6 +201,8 @@
     RETableViewItem *buttonItem = [RETableViewItem itemWithTitle:@"退出" accessoryType:UITableViewCellAccessoryNone selectionHandler:^(RETableViewItem *item) {
         [weakSelf.tableView deselectRowAtIndexPath:item.indexPath animated:YES];
         NSLog(@"已退出，请重新登录！");
+        
+        [weakSelf.navigationController presentModalViewController:[[AppPassportViewController alloc] init] animated:TRUE];
     }];
     buttonItem.textAlignment = NSTextAlignmentCenter;
     [section addItem:buttonItem];
