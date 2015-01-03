@@ -14,7 +14,7 @@
 @interface LanuncherUserViewController : UIViewController
 
 
-@property (strong, nonatomic) IBOutlet PAImageView *avaterImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *portraitImageView;
 @property (strong, nonatomic) IBOutlet RKTabView *titledTabsView;
 @property (strong, nonatomic) IBOutlet UILabel  *usernameLabel;
 @property (strong, nonatomic) IBOutlet UILabel  *userGroupNameLabel;

@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface MaintenanceViewController : UIViewController<CLLocationManagerDelegate>
+@interface MaintenanceViewController : UIViewController
 -(void) openView;
 @property(nonatomic, strong, readonly) UITableView *tableView;
-@property (strong, nonatomic) CLLocationManager *locationManager;
-@property (nonatomic, strong) CLLocation *userLocation;
+-(IBAction)detailHandler:(id)sender;
 @end

@@ -10,5 +10,5 @@
 
 @interface ActivityViewController : UIViewController
 -(void) openView;
-@property(nonatomic, strong, readonly) UITableView *tableView;
+@property(nonatomic, strong, readonly) IBOutlet UITableView *tableView;
 @end

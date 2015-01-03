@@ -39,7 +39,7 @@
     [self addSubview:userName];
     [self addSubview:userGroupName];
     [self addSubview:avaterImageView];
-    [avaterImageView setImageURL:@"http://192.168.50.69:8090/images/logo.png"];
+  //  [avaterImageView setImageURL:DOMAIN_CONTEXT()];
     return self;
 }
 

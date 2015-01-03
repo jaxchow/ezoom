@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ACPReminder.h"
 
 @implementation AppDelegate
 
@@ -39,6 +40,17 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    ACPReminder * localNotifications = [ACPReminder sharedManager];
+    
+    //Settings
+    localNotifications.messages = @[@"推送一条离线消息！有空回来看看"];
+    localNotifications.timePeriods = @[@(1)]; //days
+    localNotifications.appDomain = @"com.mydomain.appName";
+    localNotifications.randomMessage = NO; //By default is NO (optional)
+    localNotifications.testFlagInSeconds = YES; //By default is NO (optional) --> For testing purpose only!
+    localNotifications.circularTimePeriod = YES; // By default is NO (optional)
+    
+    [localNotifications createLocalNotification];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -49,6 +61,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [[ACPReminder sharedManager] checkIfLocalNotificationHasBeenTriggered];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

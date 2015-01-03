@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Sauchye. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>;
+#import <UIKit/UIKit.h>
 #import "RETableViewManager.h"
 
 @interface ProfileViewController : UITableViewController<RETableViewManagerDelegate>

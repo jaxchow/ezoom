@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *payText;
 @property (weak, nonatomic) IBOutlet UILabel *cost;
+@property (weak, nonatomic) IBOutlet UITextView *desc;
 @property (strong, nonatomic) IBOutlet UIButton *joinButton;
 -(IBAction)join:(id)sender;
 @end

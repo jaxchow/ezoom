@@ -8,26 +8,50 @@
 
 #import "LanuncherUserViewController.h"
 
+
 @interface LanuncherUserViewController ()
 
 @end
 
 @implementation LanuncherUserViewController
+    NSUserDefaults  *userDefault;
+    NSMutableDictionary *settingData;
+
+- (void)loadPortrait {
+   userDefault = [NSUserDefaults standardUserDefaults];
+    UIImage *protraitImg = [UIImage imageWithData:[userDefault dataForKey:@"avatar"]];
+    
+    [self.portraitImageView.layer setCornerRadius:(self.portraitImageView.frame.size.height/2)];
+    [self.portraitImageView.layer setMasksToBounds:YES];
+    [self.portraitImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [self.portraitImageView setClipsToBounds:YES];
+    self.portraitImageView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.portraitImageView.layer.shadowOffset = CGSizeMake(4, 4);
+    self.portraitImageView.layer.shadowOpacity = 0.5;
+    self.portraitImageView.layer.shadowRadius = 2.0;
+    self.portraitImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
+    self.portraitImageView.layer.borderWidth = 3.0f;
+    self.portraitImageView.userInteractionEnabled = YES;
+    self.portraitImageView.backgroundColor = [UIColor blackColor];
+    [self.portraitImageView setImage:protraitImg];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    PAImageView *avaterImageView=[[PAImageView alloc] initWithFrame:CGRectMake(0, 0, 100,100)];
-    [avaterImageView setImageURL:@"http://192.168.50.69:8090/images/logo.png"];
-    [_avaterImageView addSubview:avaterImageView];
-    [_usernameLabel setText:@"jaxchow"];
-    [_userGroupNameLabel setText:@"车逸族成员"];
+    
+    [self loadPortrait];
+    [_usernameLabel setText:[userDefault stringForKey:@"nickname"]];
+    [_userGroupNameLabel setText:[userDefault stringForKey:@"usergrouptext"]];
+  
+
     RKTabItem *mastercardTabItem = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"mastercard"]];
-    mastercardTabItem.titleString = @"11";
+    mastercardTabItem.titleString = @"优惠券 \n11";
     
     RKTabItem *paypalTabItem = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"paypal"]];
-    paypalTabItem.titleString = @"0";
+    paypalTabItem.titleString = @"活动 \n0";
     RKTabItem *visaTabItem = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"visa"]];
-    visaTabItem.titleString = @"1399";
+    visaTabItem.titleString =[NSString stringWithFormat:@"积分 \n %@",[userDefault stringForKey:@"userscore"]];
     _titledTabsView.backgroundColor=[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:0.25f];
     _titledTabsView.drawSeparators=true;
     _titledTabsView.tabItems = @[mastercardTabItem,paypalTabItem,visaTabItem];
@@ -38,19 +62,10 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

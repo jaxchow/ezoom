@@ -15,15 +15,38 @@
 #import "AppSettingsViewController.h"
 #import "MaintenanceViewController.h"
 #import "ActivityViewController.h"
-#import "CreateActivityViewController.h"
 #import "AppPassportViewController.h"
+#import "FeedbackViewController.h"
+#import "AFHTTPRequestOperation.h"
+
+
+
 @interface RootViewController ()
             
 
 @end
 
 @implementation RootViewController
-
+-(id)init {
+    //[self.navigationController setNavigationBarHidden:TRUE];
+    //self.navigationController.navigationBar.translucent=NO;
+ 
+    NSURLRequest *request = [NSURLRequest requestWithURL:DOMAIN_URL(@"/mobile/user/userinfo.jspx")];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Success: %@", operation.responseString);
+        
+        NSString *requestTmp = [NSString stringWithString:operation.responseString];
+        NSData *resData = [[NSData alloc] initWithData:[requestTmp dataUsingEncoding:NSUTF8StringEncoding]];
+        //系统自带JSON解析
+        NSDictionary *resultDic = [NSJSONSerialization JSONObjectWithData:resData options:NSJSONReadingMutableLeaves error:nil];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Failure: %@", error);
+    }];
+    [operation start];
+    return self;
+}
 -(void)loadView
 {
     [super loadView];
@@ -33,7 +56,7 @@
     [[self appControllers] setObject:[AppSettingsViewController class] forKey:@"AppSettingsViewController"];
     [[self appControllers] setObject:[MaintenanceViewController class] forKey:@"MaintenanceViewController"];
     [[self appControllers] setObject:[ActivityViewController class] forKey:@"ActivityViewController"];
-    [[self appControllers] setObject:[CreateActivityViewController class] forKey:@"CreateActivityViewController"];
+    [[self appControllers] setObject:[FeedbackViewController class] forKey:@"FeedbackViewController"];
     
     if(![self hasSavedLauncherItems])
     {
@@ -57,11 +80,11 @@
                                                                      target:@"CouponViewController"
                                                                 targetTitle:@"积分对兑"
                                                                   deletable:NO],
-                                      [[MyLauncherItem alloc] initWithTitle:@"我的车圈"
+                                      [[MyLauncherItem alloc] initWithTitle:@"建议反馈"
                                                                 iPhoneImage:@"itemImage"
                                                                   iPadImage:@"itemImage-iPad"
-                                                                     target:@"CreateActivityViewController"
-                                                                targetTitle:@"我的车圈"
+                                                                     target:@"FeedbackViewController"
+                                                                targetTitle:@"建议反馈"
                                                                   deletable:NO],
                                       [[MyLauncherItem alloc] initWithTitle:@"个人设置"
                                                                 iPhoneImage:@"itemImage"
@@ -86,8 +109,7 @@
     return [super shouldAutorotateToInterfaceOrientation:toInterfaceOrientation];
 }
 - (void)viewDidLoad {
-   // self.launcherNavigationController.toolbarHidden=TRUE;
-  //  [self.navigationController presentModalViewController:[[AppPassportViewController alloc] init] animated:true];
+    
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     [super viewDidLoad];
 }

@@ -96,8 +96,8 @@
         model.sourceType = dict[@"sourceType"];
         model.contentType = dict[@"contentType"];
         model.cost = dict[@"cost"];
-        model.limitCount = dict[@"limitCount"];
-        model.participate = dict[@"participate"];
+        model.limitCount =[dict[@"limitCount"] integerValue];
+        model.participate=[dict[@"participate"] integerValue];
         
         [_saveDataArray addObject:model];
     }
@@ -125,14 +125,18 @@
     ActivityModel *model = _saveDataArray[indexPath.row];
     cell.title.text = model.title;
     cell.payText.text = model.payText;
-  //  cell.cost.text = model.cost;
+    cell.cost.text =[NSString stringWithFormat:@"数量:%d",model.limitCount-model.participate];
     [cell.activityImg sd_setImageWithURL:DOMAIN_URL(model.activityImg) placeholderImage:[UIImage imageNamed:@"photo"]];
+    if(model.limitCount-model.participate<=0){
+        cell.cost.text =[NSString stringWithFormat:@"数量:%d",0];
+        [cell.joinButton setTitle:@"已发完" forState:UIControlStateDisabled];
+    }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     ActivityModel *model = _saveDataArray[indexPath.row];
     [self.navigationController pushViewController:[[CouponDetailViewController alloc] initWithModel:model] animated:TRUE];
     

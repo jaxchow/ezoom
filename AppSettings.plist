@@ -6,10 +6,12 @@
 	<string>sdfadsg29342ksldfjs</string>
 	<key>User</key>
 	<dict>
+		<key>avatar</key>
+		<string>/static/no_user.gif</string>
 		<key>realname</key>
 		<string>一人玩</string>
 		<key>userscore</key>
-		<integer>0</integer>
+		<integer>130</integer>
 		<key>hobby</key>
 		<string>无</string>
 		<key>city</key>

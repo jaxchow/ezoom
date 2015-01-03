@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *address;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *distance;
-
+@property (strong, nonatomic) IBOutlet UIButton *detailButton;
+-(IBAction)detailHandler:(id)sender;
 @end

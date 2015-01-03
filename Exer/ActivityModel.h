@@ -22,7 +22,8 @@
 @property (nonatomic, strong)NSString *sourceType;
 @property (nonatomic, strong)NSString *contentType;
 @property (nonatomic, strong)NSString *cost;
-@property (nonatomic, strong)NSString *limitCount;
-@property (nonatomic, strong)NSString *participate;
+@property (nonatomic, strong)NSString *endDate;
+@property (nonatomic, assign)NSInteger *limitCount;
+@property (nonatomic, assign)NSInteger *participate;
 
 @end

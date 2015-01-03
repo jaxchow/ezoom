@@ -15,6 +15,8 @@
 #import "MaintenanceModel.h"
 #import "ProgressHUD.h"
 #import "MaintenanceDetailViewController.h"
+#import "CouponDetailViewController.h"
+#import "MMLocationManager.h"
 
 @interface MaintenanceViewController ()<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -29,12 +31,19 @@
 
 - (void)viewDidLoad {
     // Do any additional setup after loading the view.
+//    CLLocation *location = [[CLLocation alloc] initWithLatitude:30.1234 longitude:120.5566];
+//
+//    [[MMLocationManager shareLocation] getLocationCoordinate:^(CLLocationCoordinate2D locationCorrrdinate) {
+//        NSLog(@"%f %f",locationCorrrdinate.latitude,locationCorrrdinate.longitude);
+//        CLLocation *userLocation = [[CLLocation alloc] initWithLatitude:locationCorrrdinate.latitude longitude:locationCorrrdinate.longitude];
+//        CLLocationDistance distance = [userLocation distanceFromLocation:location];
+//        NSLog(@"distance:%e",distance);
+//    }];
     _saveDataArray = [NSMutableArray array];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 20) style:UITableViewStylePlain];
     
     _tableView.rowHeight = 120;
-    
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
@@ -54,6 +63,7 @@
  //   [self totalDistance];
     // 2.集成刷新控件
     // Do any additional setup after loading the view.
+  //  __block __weak MaintenanceViewController *wself = self;
 }
 
 
@@ -68,8 +78,9 @@
     MaintenanceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
     if(_saveDataArray.count>0){
-        MaintenanceModel *model = _saveDataArray[indexPath.row];
+       // MaintenanceModel *model = _saveDataArray[indexPath.row];
            cell.distance.text=@"aaa";
+        [cell.detailButton addTarget:self action:@selector(detailHandler:) forControlEvents:UIControlEventTouchDown];
 //        cell.userName.text = model.userName;
 //        cell.userGroup.text = model.userGroup;
 //        cell.weekScore.text =[NSString stringWithFormat: @"%d名", indexPath.row+1];
@@ -79,19 +90,21 @@
     
     return cell;
 }
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation {
-    _userLocation = newLocation;
-}
--(void)totalDistance{
 
-     CLLocation *location = [[CLLocation alloc] initWithLatitude:30.124314f longitude:120.1213f];
-    
-    CLLocationDistance distance = [_userLocation distanceFromLocation:location];
-    NSLog(@"%@distance %@,%@",_userLocation,distance,location);
-  //  return 0;
-
+//-(void)totalDistance{
+//
+//     CLLocation *location = [[CLLocation alloc] initWithLatitude:30.124314f longitude:120.1213f];
+//    
+//    CLLocationDistance distance = [_userLocation distanceFromLocation:location];
+//    NSLog(@"%@distance %@,%@",_userLocation,distance,location);
+//  //  return 0;
+//
+//}
+-(void)detailHandler:(id)sender{
+    MaintenanceModel *model = _saveDataArray[0];
+    NSLog(@"model:%@",model);
+    CouponDetailViewController *cdvc= [[CouponDetailViewController alloc] initWithModel:model];
+    [self.navigationController pushViewController:cdvc animated:true];
 }
 
 #pragma mark - ASIHTTPRequestDelegate

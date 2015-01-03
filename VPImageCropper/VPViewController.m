@@ -30,8 +30,9 @@
 
 - (void)loadPortrait {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^ {
-        NSURL *portraitUrl = [NSURL URLWithString:@"http://192.168.50.69:8090/images/logo.png"];
-        UIImage *protraitImg = [UIImage imageWithData:[NSData dataWithContentsOfURL:portraitUrl]];
+        NSUserDefaults  * userDefault = [NSUserDefaults standardUserDefaults];
+        
+        UIImage *protraitImg = [UIImage imageWithData:[userDefault objectForKey:@"avatar"]];
         dispatch_sync(dispatch_get_main_queue(), ^{
             self.portraitImageView.image = protraitImg;
         });
@@ -52,6 +53,10 @@
     self.portraitImageView.image = editedImage;
     [cropperViewController dismissViewControllerAnimated:YES completion:^{
         // TO DO
+        NSUserDefaults  * userDefault = [NSUserDefaults standardUserDefaults];
+        NSData *imageData=UIImagePNGRepresentation(editedImage);
+        [userDefault setObject:imageData forKey:@"avatar"];
+        [userDefault synchronize];
     }];
 }
 

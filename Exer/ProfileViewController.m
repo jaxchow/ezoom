@@ -51,7 +51,7 @@
  
     settingData[@"User"][@"realname"]=self.realnameItem.value;
     settingData[@"User"][@"nickname"]=self.nicknameItem.value;
-    settingData[@"User"][@"sexItem"]=self.sexItem.value;
+   // settingData[@"User"][@"sexItem"]=self.sexItem.value;
     settingData[@"User"][@"birthday"]=self.birthdayItem.value;
     settingData[@"User"][@"intro"]=self.introItem.value;
     settingData[@"User"][@"hobby"]=self.hobbyItem.value;
@@ -59,6 +59,7 @@
     
     //创建并写入文件
     [settingData writeToFile:fileName atomically:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (RETableViewSection *)addBaseSection{
@@ -81,11 +82,11 @@
     self.realnameItem = [RETextItem itemWithTitle:@"真实姓名" value:settingData[@"User"][@"realname"] placeholder:@"请填写真名姓名"];
     [section addItem:self.realnameItem];
     
-    self.sexItem = [RESegmentedItem itemWithTitle:@"性别" value:settingData[@"User"][@"sex"] switchValueChangeHandler:^(RESegmentedItem *item) {
-       // NSLog(@"Value: %@", item);
-        //self.sexItem.value=item;
-    }];
-    [section addItem:self.sexItem];
+//    self.sexItem = [RESegmentedItem itemWithTitle:@"性别" value:settingData[@"User"][@"sex"] switchValueChangeHandler:^(RESegmentedItem *item) {
+//       // NSLog(@"Value: %@", item);
+//        //self.sexItem.value=item;
+//    }];
+//    [section addItem:self.sexItem];
     
     self.birthdayItem = [REDateTimeItem itemWithTitle:@"出生日期" value:settingData[@"User"][@"birthday"] placeholder:@"请选择出生日期" format:@"yyyy-MM-dd" datePickerMode:UIDatePickerModeDate];
     [section addItem:self.birthdayItem];

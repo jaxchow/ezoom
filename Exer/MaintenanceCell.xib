@@ -29,6 +29,9 @@
                         <state key="normal" title="免费获取">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="detailHandler:" destination="-2" eventType="touchDown" id="Gaa-1H-96H"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="优惠券 满1000元减100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4n-mF-NsF">
                         <rect key="frame" x="19" y="90" width="154" height="21"/>
@@ -56,7 +59,11 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="address" destination="omN-lC-VxJ" id="zRc-kG-KjN"/>
+                <outlet property="detailButton" destination="LYq-vf-2fe" id="cSv-RW-NEX"/>
                 <outlet property="distance" destination="AvS-RU-WUf" id="MtB-cp-nTB"/>
+                <outlet property="name" destination="BJr-oo-GjM" id="yXa-Gs-1Rm"/>
+                <outlet property="title" destination="4Ev-xj-HQp" id="EBZ-p9-hc5"/>
             </connections>
             <point key="canvasLocation" x="406" y="308"/>
         </tableViewCell>

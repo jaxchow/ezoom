@@ -142,16 +142,12 @@
         [item deselectRowAnimated:YES];
         
         NSMutableArray *options = [[NSMutableArray alloc] init];
-        [options addObject:[NSString stringWithFormat:@"杭州"]];
-        [options addObject:[NSString stringWithFormat:@"温州"]];
-        [options addObject:[NSString stringWithFormat:@"宁波"]];
-        [options addObject:[NSString stringWithFormat:@"嘉兴"]];
-        [options addObject:[NSString stringWithFormat:@"绍兴"]];
-        [options addObject:[NSString stringWithFormat:@"湖州"]];
-        [options addObject:[NSString stringWithFormat:@"台州"]];
-        [options addObject:[NSString stringWithFormat:@"金华"]];
-        [options addObject:[NSString stringWithFormat:@"衢州"]];
-        [options addObject:[NSString stringWithFormat:@"舟山"]];
+        [options addObject:[NSString stringWithFormat:@"宝马"]];
+        [options addObject:[NSString stringWithFormat:@"奥迪"]];
+        [options addObject:[NSString stringWithFormat:@"奔驰"]];
+        [options addObject:[NSString stringWithFormat:@"大众"]];
+        [options addObject:[NSString stringWithFormat:@"丰田"]];
+        [options addObject:[NSString stringWithFormat:@"现代"]];
         
         RETableViewOptionsController *optionsController = [[RETableViewOptionsController alloc] initWithItem:item options:options multipleChoice:NO completionHandler:^{
             [weakSelf.navigationController popViewControllerAnimated:YES];

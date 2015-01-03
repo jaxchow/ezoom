@@ -42,8 +42,15 @@
 - (void)viewDidLoad {
     // Do any additional setup after loading the view.
    // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] style:UIBarButtonSystemItemCompose target:self action:@selector(rules:)];
-    UIButton* rightButton = (UIButton*)self.navigationItem.rightBarButtonItem.customView;
-    [rightButton addTarget:self action:@selector(storeAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIButton* rightButton = (UIButton*)self.navigationItem.rightBarButtonItem;
+    [rightButton addTarget:self action:@selector(boardRulesHandler:) forControlEvents:UIControlEventTouchUpInside];
+    
+    segmentControlTitles = [NSArray arrayWithObjects:@"积分达人榜", @"活动达人榜", nil];
+    UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:segmentControlTitles];
+    [segmentControl setSelectedSegmentIndex:0];
+    self.navigationItem.titleView=segmentControl;
+    
+    
     _saveDataArray = [NSMutableArray array];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 20) style:UITableViewStylePlain];
@@ -63,7 +70,7 @@
     //
     httpRequest.delegate = self;
     //异步发送请求
-    [httpRequest startSynchronous];
+    [httpRequest startAsynchronous];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [ProgressHUD show:@"加载中..."];
     // 2.集成刷新控件
@@ -171,7 +178,7 @@
         
         [_saveDataArray addObject:model];
     }
-     [_tableView reloadData];
+    [_tableView reloadData];
     [ProgressHUD dismiss];
 }
 
@@ -179,6 +186,12 @@
 {
     NSLog(@"请求失败");
     [ProgressHUD dismiss];
+}
+
+-(void)boardRulesHandler:(id *)sender{
+
+    NSLog(@"boardRules");
+   // UIAlertView alert
 }
 
 -(void)openView
